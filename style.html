@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080808">
+<title>Style Guide | Cybersigilism & Gothic คืออะไร — BLACK GOTHIC</title>
+<meta name="description" content="ทำความรู้จักกับ Cybersigilism และ Gothic สไตล์ที่อยู่เบื้องหลัง Black Gothic — ลายเส้นที่ไม่มีใครเหมือน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    color-scheme: dark;
+    --black: #080808;
+    --white: #f0ede6;
+    --gray-dark: #1a1a1a;
+    --gray-mid: #2e2e2e;
+    --gray-line: #333;
+    --accent: #c8c0a8;
+    --accent-glow: #e8e0cc;
+    --red-dark: #8b1a1a;
+  }
+
+  html { scroll-behavior: smooth; background-color: #080808 !important; }
+
+  body {
+    background: var(--black) !important;
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+
+  /* NOISE */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+  }
+
+  /* CURSOR */
+  .cursor-dot {
+    position: fixed; width: 6px; height: 6px;
+    background: var(--white); border-radius: 50%;
+    pointer-events: none; z-index: 10000;
+    transition: transform 0.1s; transform: translate(-50%, -50%);
+  }
+  .cursor-ring {
+    position: fixed; width: 32px; height: 32px;
+    border: 1px solid rgba(200,192,168,0.5); border-radius: 50%;
+    pointer-events: none; z-index: 9999;
+    transition: transform 0.15s ease, width 0.2s, height 0.2s;
+    transform: translate(-50%, -50%);
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 1.5rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(8,8,8,0.85); backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    font-family: 'Metal Mania', cursive; font-size: 1.25rem;
+    letter-spacing: 0.05em; color: var(--white); text-decoration: none;
+    text-transform: uppercase; transition: opacity 0.3s; line-height: 1;
+  }
+  .nav-logo:hover { opacity: 0.75; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    letter-spacing: 0.18em; color: rgba(240,237,230,0.55);
+    text-decoration: none; text-transform: uppercase; transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: 0 3rem;
+  }
+  .hero-bg-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(200,192,168,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,192,168,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-sigil-bg {
+    position: absolute; right: -5%; top: 50%;
+    transform: translateY(-50%);
+    width: 52vw; max-width: 680px;
+    opacity: 0.06;
+    animation: sigil-breathe 8s ease-in-out infinite;
+  }
+  @keyframes sigil-breathe {
+    0%,100% { opacity: 0.06; transform: translateY(-50%) scale(1) rotate(0deg); }
+    50% { opacity: 0.11; transform: translateY(-50%) scale(1.02) rotate(1deg); }
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 720px; }
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.35em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 1.5rem; opacity: 0; animation: fade-up 1s 0.3s forwards;
+  }
+  .hero-title {
+    font-family: 'Metal Mania', cursive;
+    font-size: clamp(2.8rem, 7vw, 6.5rem);
+    font-weight: 400; line-height: 1; color: var(--white);
+    margin-bottom: 0.2em; letter-spacing: 0.02em; text-transform: uppercase;
+    opacity: 0; animation: fade-up 1s 0.5s forwards;
+    text-shadow: 0 0 40px rgba(200,192,168,0.12);
+  }
+  .hero-title .accent { color: var(--accent); }
+  .hero-subtitle {
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    letter-spacing: 0.2em; color: rgba(240,237,230,0.35); text-transform: uppercase;
+    margin-bottom: 2.5rem; opacity: 0; animation: fade-up 1s 0.7s forwards;
+  }
+  .hero-desc {
+    font-size: 1.1rem; font-weight: 300; line-height: 1.8;
+    color: rgba(240,237,230,0.6); max-width: 520px;
+    opacity: 0; animation: fade-up 1s 0.9s forwards;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SECTION BASE */
+  section { padding: 8rem 3rem; position: relative; }
+  .section-label {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.4em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 700; line-height: 1.1; color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+  .divider { width: 60px; height: 1px; background: var(--accent); margin-bottom: 3rem; }
+
+  /* WHAT IS — TAB SECTION */
+  #what-is { border-top: 1px solid var(--gray-line); }
+  .tabs-nav {
+    display: flex; gap: 0; margin-bottom: 4rem;
+    border-bottom: 1px solid var(--gray-line);
+  }
+  .tab-btn {
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(240,237,230,0.4); background: none; border: none;
+    padding: 1rem 2rem; cursor: pointer; position: relative;
+    transition: color 0.3s;
+  }
+  .tab-btn::after {
+    content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
+    height: 2px; background: var(--accent); transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .tab-btn.active { color: var(--white); }
+  .tab-btn.active::after { transform: scaleX(1); }
+  .tab-btn:hover { color: var(--accent-glow); }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .style-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start; max-width: 1200px; margin: 0 auto;
+  }
+  .style-visual {
+    position: relative;
+  }
+  .sigil-frame {
+    width: 100%; aspect-ratio: 1;
+    border: 1px solid var(--gray-line);
+    position: relative; display: flex;
+    align-items: center; justify-content: center; overflow: hidden;
+  }
+  .sigil-frame::before, .sigil-frame::after {
+    content: ''; position: absolute;
+    border: 1px solid rgba(200,192,168,0.2);
+  }
+  .sigil-frame::before { inset: 12px; }
+  .sigil-frame::after { inset: 24px; transform: rotate(45deg); }
+  .corner-deco {
+    position: absolute; width: 20px; height: 20px;
+    border-color: var(--accent); border-style: solid;
+  }
+  .corner-deco.tl { top:-1px; left:-1px; border-width: 2px 0 0 2px; }
+  .corner-deco.tr { top:-1px; right:-1px; border-width: 2px 2px 0 0; }
+  .corner-deco.bl { bottom:-1px; left:-1px; border-width: 0 0 2px 2px; }
+  .corner-deco.br { bottom:-1px; right:-1px; border-width: 0 2px 2px 0; }
+
+  .frame-inner-svg {
+    position: relative; z-index: 1;
+    width: 72%; opacity: 0.55;
+    animation: sigil-breathe-slow 7s ease-in-out infinite;
+  }
+  @keyframes sigil-breathe-slow {
+    0%,100% { opacity: 0.55; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.03); }
+  }
+
+  .style-text .style-desc {
+    font-size: 1.05rem; line-height: 1.9;
+    color: rgba(240,237,230,0.65); margin-bottom: 1.5rem; font-weight: 300;
+  }
+  .tag-row {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem;
+  }
+  .tag {
+    padding: 0.4rem 1rem; border: 1px solid var(--gray-line);
+    font-family: 'Space Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .tag:hover { border-color: var(--accent); background: rgba(200,192,168,0.06); }
+
+  /* ORIGIN TIMELINE */
+  #origin { border-top: 1px solid var(--gray-line); }
+  .timeline { max-width: 800px; margin: 0 auto; position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px; background: linear-gradient(to bottom, var(--accent), transparent);
+  }
+  .timeline-item {
+    padding-left: 3rem; margin-bottom: 4rem; position: relative;
+    opacity: 0; transform: translateX(-20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .timeline-item.visible { opacity: 1; transform: translateX(0); }
+  .timeline-dot {
+    position: absolute; left: -5px; top: 0.4rem;
+    width: 10px; height: 10px;
+    border: 1px solid var(--accent); background: var(--black);
+    transform: rotate(45deg);
+  }
+  .timeline-year {
+    font-family: 'Space Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.3em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .timeline-heading {
+    font-family: 'Cinzel Decorative', serif; font-size: 1.2rem;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .timeline-body {
+    font-size: 1rem; line-height: 1.85;
+    color: rgba(240,237,230,0.6); font-weight: 300;
+  }
+
+  /* ELEMENTS SECTION */
+  #elements { border-top: 1px solid var(--gray-line); }
+  .elements-intro {
+    max-width: 640px; font-size: 1.05rem; line-height: 1.9;
+    color: rgba(240,237,230,0.6); font-weight: 300; margin-bottom: 5rem;
+  }
+  .elements-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px; max-width: 1200px; margin: 0 auto;
+  }
+  .element-card {
+    background: var(--gray-dark); padding: 2.5rem 2rem;
+    border: 1px solid var(--gray-line); position: relative;
+    overflow: hidden; transition: border-color 0.3s;
+  }
+  .element-card:hover { border-color: var(--accent); }
+  .element-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .element-card:hover::before { transform: scaleX(1); }
+  .element-num {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.3em; color: rgba(200,192,168,0.4);
+    margin-bottom: 1.5rem;
+  }
+  .element-icon { margin-bottom: 1.5rem; opacity: 0.7; }
+  .element-title {
+    font-family: 'Cinzel Decorative', serif; font-size: 1rem;
+    color: var(--white); margin-bottom: 1rem;
+  }
+  .element-body {
+    font-size: 0.95rem; line-height: 1.8;
+    color: rgba(240,237,230,0.55); font-weight: 300;
+  }
+
+  /* COMPARISON SECTION */
+  #compare { border-top: 1px solid var(--gray-line); }
+  .compare-table-wrap { max-width: 1000px; margin: 0 auto; overflow-x: auto; }
+  .compare-table {
+    width: 100%; border-collapse: collapse;
+  }
+  .compare-table th {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--gray-line); text-align: left;
+  }
+  .compare-table td {
+    padding: 1.25rem 1.5rem; font-size: 0.95rem; font-weight: 300;
+    color: rgba(240,237,230,0.65); border-bottom: 1px solid rgba(51,51,51,0.5);
+    vertical-align: top;
+  }
+  .compare-table tr:hover td { background: rgba(200,192,168,0.03); }
+  .td-label {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.12em; color: rgba(200,192,168,0.5); text-transform: uppercase;
+  }
+
+  /* CTA BANNER */
+  #cta-band {
+    border-top: 1px solid var(--gray-line);
+    padding: 7rem 3rem; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  #cta-band::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(200,192,168,0.04) 0%, transparent 70%);
+  }
+  .cta-eyebrow {
+    font-family: 'Space Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.4em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .cta-title {
+    font-family: 'Metal Mania', cursive;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    color: var(--white); margin-bottom: 1rem; text-transform: uppercase;
+  }
+  .cta-sub {
+    font-family: 'Space Mono', monospace; font-size: 0.72rem;
+    letter-spacing: 0.2em; color: rgba(240,237,230,0.35); text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  .cta-btns { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    padding: 0.9rem 2.5rem; background: var(--white); color: var(--black);
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+    border: none; cursor: pointer; transition: background 0.3s, color 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::after {
+    content: ''; position: absolute; inset: 0;
+    background: var(--accent); transform: translateX(-101%);
+    transition: transform 0.3s ease;
+  }
+  .btn-primary:hover::after { transform: translateX(0); }
+  .btn-primary:hover { color: var(--black); }
+  .btn-primary span { position: relative; z-index: 1; }
+  .btn-secondary {
+    padding: 0.9rem 2.5rem; background: transparent; color: var(--white);
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none;
+    border: 1px solid rgba(240,237,230,0.25); cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--gray-line);
+    padding: 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Metal Mania', cursive; font-size: 1rem;
+    letter-spacing: 0.05em; color: var(--white); text-decoration: none;
+    text-transform: uppercase;
+  }
+  .footer-logo span { color: var(--accent); }
+  .footer-copy {
+    font-family: 'Space Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.15em; color: rgba(240,237,230,0.25); text-transform: uppercase;
+  }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.15em; color: rgba(240,237,230,0.4);
+    text-decoration: none; text-transform: uppercase; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    #hero { padding: 0 1.5rem; }
+    .style-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .elements-grid { grid-template-columns: 1fr; }
+    .compare-table th, .compare-table td { padding: 1rem; font-size: 0.85rem; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ============================================================
+     MOBILE BOTTOM NAV
+     แสดงเฉพาะหน้าจอ ≤ 900px (มือถือ/แท็บเล็ต)
+  ============================================================ */
+
+  /* ซ่อน nav บนหัวเมื่ออยู่บนมือถือ */
+  @media (max-width: 900px) {
+    nav { display: none !important; }
+  }
+
+  /* แถบ nav ล่าง — ซ่อนบนคอมโดยดีฟอลต์ */
+  .mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 64px;
+    background: rgba(8,8,8,0.96);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(200,192,168,0.12);
+    z-index: 2000;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* แสดงเฉพาะมือถือ */
+  @media (max-width: 900px) {
+    .mobile-bottom-nav { display: flex !important; }
+    body { padding-bottom: 72px; }
+  }
+
+  /* แต่ละปุ่ม */
+  .mob-nav-item {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 4px;
+    color: rgba(200,192,168,0.38);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.48rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.25s;
+    padding-top: 4px;
+    position: relative;
+  }
+
+  /* ปุ่ม active — เปลี่ยนสีเป็น accent */
+  .mob-nav-item.active { color: var(--accent); }
+
+  /* icon */
+  .mob-nav-icon {
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mob-nav-icon svg {
+    width: 100%; height: 100%;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Black <span>Gothic</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="style.html" >Style</a></li>
+    <!-- <li><a href="index.html#contact">Order</a></li> -->
+    <li><a href="warranty.html">Warranty</a></li>
+    <li><a href="care.html">Care</a></li>
+    <li><a href="order.html">Order</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <!-- Decorative background SVG -->
+  <svg class="hero-sigil-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="180" stroke="#c8c0a8" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="120" stroke="#c8c0a8" stroke-width="0.5"/>
+    <path d="M200 20 L200 380 M20 200 L380 200" stroke="#c8c0a8" stroke-width="0.5"/>
+    <path d="M200 20 L380 200 L200 380 L20 200 Z" stroke="#c8c0a8" stroke-width="0.5"/>
+    <path d="M60 60 L340 340 M340 60 L60 340" stroke="#c8c0a8" stroke-width="0.3"/>
+    <circle cx="200" cy="200" r="60" stroke="#c8c0a8" stroke-width="1"/>
+    <path d="M200 140 L234 174 L220 215 L180 215 L166 174 Z" stroke="#c8c0a8" stroke-width="0.8"/>
+    <circle cx="200" cy="200" r="8" fill="#c8c0a8" opacity="0.4"/>
+  </svg>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Black Gothic — Style Guide</p>
+    <h1 class="hero-title">The <span class="accent">Art</span><br>Behind<br>The Ink</h1>
+    <p class="hero-subtitle">Cybersigilism × Gothic — ที่มาของลายเส้น</p>
+    <p class="hero-desc">ลายเส้นแต่ละเส้นที่เพ้นบนเสื้อไม่ได้เกิดขึ้นโดยบังเอิญ<br>มันมีรากเหง้า มีความหมาย และมีประวัติศาสตร์อยู่เบื้องหลัง</p>
+  </div>
+</section>
+
+<!-- WHAT IS TAB -->
+<section id="what-is">
+  <div class="section-label">// 01 — ทำความรู้จัก</div>
+  <h2 class="section-title">สองสไตล์<br>หนึ่งเอกลักษณ์</h2>
+  <div class="divider"></div>
+
+  <div class="tabs-nav">
+    <button class="tab-btn active" data-tab="cyber">Cybersigilism</button>
+    <button class="tab-btn" data-tab="gothic">Gothic</button>
+    <button class="tab-btn" data-tab="fusion">Fusion — Black Gothic</button>
+  </div>
+
+  <!-- TAB: CYBERSIGILISM -->
+  <div class="tab-panel active" id="tab-cyber">
+    <div class="style-grid">
+      <div class="style-visual">
+        <div class="sigil-frame">
+          <div class="corner-deco tl"></div>
+          <div class="corner-deco tr"></div>
+          <div class="corner-deco bl"></div>
+          <div class="corner-deco br"></div>
+          <svg class="frame-inner-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="150" r="130" stroke="#c8c0a8" stroke-width="0.6"/>
+            <path d="M150 20 L280 150 L150 280 L20 150 Z" stroke="#c8c0a8" stroke-width="0.8"/>
+            <path d="M150 60 L240 150 L150 240 L60 150 Z" stroke="#c8c0a8" stroke-width="0.5"/>
+            <path d="M150 150 Q170 100 200 80 Q220 70 230 90 Q240 110 210 120 Q190 130 180 150" stroke="#c8c0a8" stroke-width="1.2" fill="none"/>
+            <path d="M150 150 Q120 170 100 200 Q85 220 100 235 Q115 250 130 225 Q140 205 150 185" stroke="#c8c0a8" stroke-width="1" fill="none"/>
+            <path d="M150 150 Q180 160 210 180 Q230 200 215 220 Q200 240 185 215 Q175 195 160 180" stroke="#c8c0a8" stroke-width="0.9" fill="none"/>
+            <path d="M150 130 L154 146 L150 162 L146 146 Z" stroke="#c8c0a8" stroke-width="1" fill="#c8c0a8" opacity="0.6"/>
+            <path d="M130 150 L146 154 L162 150 L146 146 Z" stroke="#c8c0a8" stroke-width="1" fill="#c8c0a8" opacity="0.6"/>
+            <path d="M90 80 L95 100 M87 90 L103 90" stroke="#c8c0a8" stroke-width="0.8"/>
+            <path d="M210 80 L215 100 M208 90 L224 90" stroke="#c8c0a8" stroke-width="0.8"/>
+            <path d="M60 180 L65 200 M58 190 L74 190" stroke="#c8c0a8" stroke-width="0.8"/>
+          </svg>
+        </div>
+      </div>
+      <div class="style-text">
+        <p class="style-desc">
+          <strong style="color:var(--white)">Cybersigilism</strong> คือสไตล์ศิลปะที่เกิดจากการผสานระหว่าง <em>Sigil</em> (สัญลักษณ์ลึกลับในเวทมนตร์โบราณ) เข้ากับความเป็น <em>Cyber</em> — ดิจิทัล เทคโนโลยี และความเป็นอนาคต
+        </p>
+        <p class="style-desc">
+          ลายเส้นจะมีลักษณะ <strong style="color:var(--accent)">ไหลลื่นเหมือนอินทรีย์</strong> แต่ในเวลาเดียวกันก็มีโครงสร้างเชิงเรขาคณิตซ่อนอยู่ เหมือนวงจรไฟฟ้าที่มีชีวิต — เถาวัลย์ที่เป็นสายไฟ รากไม้ที่เป็นข้อมูล
+        </p>
+        <p class="style-desc">
+          มีต้นกำเนิดในยุค 2020s บนแพลตฟอร์มอย่าง TikTok และ Instagram โดยเริ่มจาก tattoo art และ fashion แล้วกระจายสู่วัฒนธรรม Streetwear ระดับโลก
+        </p>
+        <!-- Misconception box -->
+        <div style="border:1px solid rgba(200,192,168,0.2); padding:1.25rem 1.5rem; margin-top:1.5rem; background:rgba(200,192,168,0.03);">
+          <p style="font-family:'Space Mono',monospace; font-size:0.58rem; letter-spacing:0.25em; color:var(--accent); text-transform:uppercase; margin-bottom:0.75rem;">⚠ เข้าใจผิดบ่อย</p>
+          <p style="font-size:0.9rem; line-height:1.75; color:rgba(240,237,230,0.55); font-weight:300;">Cybersigilism <strong style="color:var(--white)">ไม่ใช่แค่ลายเส้นสวยๆ</strong> — แต่ละ Sigil มีความหมายและพลังงานเฉพาะตัว ลายที่ดูคล้ายกันอาจสื่อความหมายต่างกันโดยสิ้นเชิง</p>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Organic Lines</span>
+          <span class="tag">Sacred Geometry</span>
+          <span class="tag">Rune Marks</span>
+          <span class="tag">Star / Sparkle</span>
+          <span class="tag">Tendril Flow</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: GOTHIC -->
+  <div class="tab-panel" id="tab-gothic">
+    <div class="style-grid">
+      <div class="style-visual">
+        <div class="sigil-frame">
+          <div class="corner-deco tl"></div>
+          <div class="corner-deco tr"></div>
+          <div class="corner-deco bl"></div>
+          <div class="corner-deco br"></div>
+          <svg class="frame-inner-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Gothic SVG — arches, thorns, crosses -->
+            <!-- arch -->
+            <path d="M100 260 L100 160 Q100 80 150 60 Q200 80 200 160 L200 260" stroke="#c8c0a8" stroke-width="1"/>
+            <path d="M80 260 L80 170 Q80 70 150 50 Q220 70 220 170 L220 260" stroke="#c8c0a8" stroke-width="0.5"/>
+            <!-- cross -->
+            <path d="M150 100 L150 240" stroke="#c8c0a8" stroke-width="1.5"/>
+            <path d="M120 145 L180 145" stroke="#c8c0a8" stroke-width="1.5"/>
+            <!-- thorns left -->
+            <path d="M100 160 Q85 155 75 140 Q88 148 95 145" stroke="#c8c0a8" stroke-width="0.9"/>
+            <path d="M100 180 Q82 178 70 165 Q85 172 93 170" stroke="#c8c0a8" stroke-width="0.9"/>
+            <path d="M100 200 Q80 200 68 188 Q83 195 92 194" stroke="#c8c0a8" stroke-width="0.9"/>
+            <!-- thorns right -->
+            <path d="M200 160 Q215 155 225 140 Q212 148 205 145" stroke="#c8c0a8" stroke-width="0.9"/>
+            <path d="M200 180 Q218 178 230 165 Q215 172 207 170" stroke="#c8c0a8" stroke-width="0.9"/>
+            <path d="M200 200 Q220 200 232 188 Q217 195 208 194" stroke="#c8c0a8" stroke-width="0.9"/>
+            <!-- ornament top -->
+            <circle cx="150" cy="60" r="10" stroke="#c8c0a8" stroke-width="0.8"/>
+            <path d="M143 53 L157 67 M157 53 L143 67" stroke="#c8c0a8" stroke-width="0.6"/>
+            <!-- bottom deco -->
+            <path d="M120 260 L150 275 L180 260" stroke="#c8c0a8" stroke-width="0.8"/>
+          </svg>
+        </div>
+      </div>
+      <div class="style-text">
+        <p class="style-desc">
+          <strong style="color:var(--white)">Gothic</strong> ในบริบทของ fashion และ art หมายถึงสุนทรียศาสตร์ที่เต็มไปด้วย <em>ความลึกลับ ความมืด ความงามที่ขมขื่น</em> — ได้รับแรงบันดาลใจจากสถาปัตยกรรมยุคกลาง วรรณกรรมสยองขวัญ และศิลปะมรณะ
+        </p>
+        <p class="style-desc">
+          องค์ประกอบหลักได้แก่ <strong style="color:var(--accent)">กางเขน, ซุ้มโค้ง, หนาม, หัวกะโหลก, ปีกค้างคาว</strong> และลายเส้นที่ดูเหมือนงานแกะสลักบนหินโบสถ์ — ทุกอย่างสื่อถึงความตาย ความงาม และการดำรงอยู่ในความมืด
+        </p>
+        <p class="style-desc">
+          ใน Streetwear สมัยใหม่ Gothic ถูกตีความใหม่ให้มีความ raw และ personal มากขึ้น ออกจากกรอบเดิมสู่การแสดงออกที่เป็นตัวเองอย่างแท้จริง
+        </p>
+        <div class="tag-row">
+          <span class="tag">Cross & Arch</span>
+          <span class="tag">Thorns</span>
+          <span class="tag">Dark Romance</span>
+          <span class="tag">Medieval Art</span>
+          <span class="tag">Black &amp; White</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: FUSION -->
+  <div class="tab-panel" id="tab-fusion">
+    <div class="style-grid">
+      <div class="style-visual">
+        <div class="sigil-frame">
+          <div class="corner-deco tl"></div>
+          <div class="corner-deco tr"></div>
+          <div class="corner-deco bl"></div>
+          <div class="corner-deco br"></div>
+          <svg class="frame-inner-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M110 270 L110 175 Q110 105 150 85 Q190 105 190 175 L190 270" stroke="#c8c0a8" stroke-width="0.8"/>
+            <path d="M150 120 Q175 90 200 75 Q215 68 220 85 Q225 102 200 112 Q180 120 170 140" stroke="#c8c0a8" stroke-width="1.1" fill="none"/>
+            <path d="M150 120 Q125 140 105 165 Q90 185 105 198 Q118 210 130 190 Q140 172 152 155" stroke="#c8c0a8" stroke-width="1" fill="none"/>
+            <path d="M150 110 L150 240" stroke="#c8c0a8" stroke-width="1.3"/>
+            <path d="M125 152 L175 152" stroke="#c8c0a8" stroke-width="1.3"/>
+            <path d="M150 132 L153 148 L150 164 L147 148 Z" fill="#c8c0a8" opacity="0.7"/>
+            <path d="M132 150 L148 153 L164 150 L148 147 Z" fill="#c8c0a8" opacity="0.7"/>
+            <path d="M110 180 Q93 175 82 160" stroke="#c8c0a8" stroke-width="0.9"/>
+            <path d="M93 160 Q90 148 96 140" stroke="#c8c0a8" stroke-width="0.6"/>
+            <path d="M190 180 Q207 175 218 160" stroke="#c8c0a8" stroke-width="0.9"/>
+            <path d="M207 160 Q210 148 204 140" stroke="#c8c0a8" stroke-width="0.6"/>
+            <path d="M70 90 L75 108 M68 99 L82 99" stroke="#c8c0a8" stroke-width="0.7"/>
+            <path d="M225 90 L230 108 M223 99 L237 99" stroke="#c8c0a8" stroke-width="0.7"/>
+            <circle cx="150" cy="85" r="8" stroke="#c8c0a8" stroke-width="0.7"/>
+          </svg>
+        </div>
+      </div>
+      <div class="style-text">
+        <p class="style-desc">
+          <strong style="color:var(--white)">Black Gothic</strong> คือการนำสองโลกที่ดูเหมือนตรงข้ามมาอยู่ในเสื้อตัวเดียวกัน — ความลึกลับอันเก่าแก่ของ Gothic รวมเข้ากับพลังงานดิจิทัลอนาคตของ Cybersigilism
+        </p>
+        <p class="style-desc">
+          ผลลัพธ์คือลายเส้นที่ <strong style="color:var(--accent)">ดูเหมือนมีชีวิต</strong> — ราวกับว่าวงจรโบราณได้รับพลังงานจากเครือข่ายดิจิทัล กางเขนที่มีเส้นประสาทไหลออกมา ซุ้มโค้งที่แตกเป็นข้อมูล หนามที่เป็นสายสัญญาณ
+        </p>
+        <p class="style-desc">
+          ธีม <strong style="color:var(--accent)">ขาว-ดำ</strong> เท่านั้น เพื่อให้ลายเส้นพูดแทนตัวเอง ไม่มีสีเข้ามาแย่งความสนใจ มีแค่ความแตกต่างระหว่างแสงและเงา
+        </p>
+        <!-- Fit in explanation box -->
+        <div style="border:1px solid rgba(200,192,168,0.2); padding:1.25rem 1.5rem; margin-top:1.5rem; background:rgba(200,192,168,0.03);">
+          <p style="font-family:'Space Mono',monospace; font-size:0.58rem; letter-spacing:0.25em; color:var(--accent); text-transform:uppercase; margin-bottom:0.75rem;">🖤 คนที่ไม่ต้องการ fit in คือใคร?</p>
+          <p style="font-size:0.9rem; line-height:1.8; color:rgba(240,237,230,0.55); font-weight:300; margin-bottom:0.75rem;">
+            <strong style="color:var(--white)">Fit in</strong> แปลว่า "กลมกลืนเข้ากับกลุ่ม" — คนส่วนใหญ่แต่งตัวเพื่อให้เป็นที่ยอมรับ ซื้อเสื้อตามเทรนด์เพื่อดูเหมือนคนอื่น
+          </p>
+          <p style="font-size:0.9rem; line-height:1.8; color:rgba(240,237,230,0.55); font-weight:300;">
+            ลูกค้าของ Black Gothic คือคนที่ <strong style="color:var(--white)">แต่งตัวเพื่อตัวเอง</strong> — ไม่สนว่าคนอื่นจะมองว่าแปลกหรือโดดเด่น เลือกสิ่งที่สะท้อนตัวตนจริงๆ ไม่ใช่ตามกระแส
+          </p>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Black &amp; White Only</span>
+          <span class="tag">Hand Painted</span>
+          <span class="tag">One of a Kind</span>
+          <span class="tag">Cyber × Gothic</span>
+          <span class="tag">Street Art</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN TIMELINE -->
+<section id="origin">
+  <div class="section-label">// 02 — ประวัติศาสตร์</div>
+  <h2 class="section-title">Timeline<br>แห่งสไตล์</h2>
+  <div class="divider"></div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">ค.ศ. 1100–1500</div>
+      <h3 class="timeline-heading">Gothic Art & Architecture</h3>
+      <p class="timeline-body">ศิลปะ Gothic กำเนิดในยุโรป เริ่มจากสถาปัตยกรรมโบสถ์ที่มีซุ้มโค้งแหลม หน้าต่างกระจกสี และลายแกะสลักบนหิน ต่อมากลายเป็นอิทธิพลต่อจิตรกรรม วรรณกรรม และแฟชั่นในยุคต่อๆ มา</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">ค.ศ. 1970–1990</div>
+      <h3 class="timeline-heading">Gothic Subculture & Fashion</h3>
+      <p class="timeline-body">Gothic กลายเป็นวัฒนธรรมย่อยจากดนตรี Post-Punk และ Deathrock — สีดำ, เครื่องประดับหัวกะโหลก, กางเขน และความงามที่มืดหม่นกลายเป็นภาษาแฟชั่นที่มีเอกลักษณ์ชัดเจน</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">ค.ศ. 1990–2010</div>
+      <h3 class="timeline-heading">Sigil Magic & Chaos Art</h3>
+      <p class="timeline-body">Sigil (สัญลักษณ์เวทมนตร์ส่วนตัว) เริ่มเป็นที่รู้จักในวงการ Chaos Magic — แนวคิดการสร้างสัญลักษณ์ที่ผสานความปรารถนาและพลังงานส่วนตัวเข้าไว้ด้วยกัน เป็นรากฐานของ Sigilism ในภายหลัง</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">ค.ศ. 2020–ปัจจุบัน</div>
+      <h3 class="timeline-heading">Cybersigilism — Born on the Internet</h3>
+      <p class="timeline-body">Cybersigilism เกิดขึ้นบน TikTok และ Instagram — ผสาน Sigil เข้ากับ aesthetic ดิจิทัล, Y2K และ Cyberpunk กลายเป็น trend tattoo และ fashion ที่แพร่หลายทั่วโลก โดยเฉพาะในวงการ Streetwear Gen Z</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">ปัจจุบัน — Black Gothic</div>
+      <h3 class="timeline-heading">The Thai Chapter</h3>
+      <p class="timeline-body">Black Gothic นำสองสไตล์นี้มาเขียนบนผืนผ้าด้วยมือ — ทำให้ลายเส้นที่เคยอยู่แค่บนหน้าจอหรือผิวหนัง ออกมาเป็นส่วนหนึ่งของชุดที่คุณสวมใส่ในชีวิตประจำวัน</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ELEMENTS -->
+<section id="elements">
+  <div class="section-label">// 03 — องค์ประกอบ</div>
+  <h2 class="section-title">Elements of<br>the Design</h2>
+  <div class="divider"></div>
+  <p class="elements-intro">ลายเส้นของ Black Gothic ประกอบด้วยองค์ประกอบหลักที่แต่ละชิ้นมีความหมายและหน้าที่ของตัวเอง</p>
+  <div class="elements-grid">
+
+    <div class="element-card">
+      <div class="element-num">01</div>
+      <div class="element-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4 L20 36 M4 20 L36 20" stroke="#c8c0a8" stroke-width="1.5"/>
+          <path d="M12 12 L28 28 M28 12 L12 28" stroke="#c8c0a8" stroke-width="0.6"/>
+          <circle cx="20" cy="20" r="6" stroke="#c8c0a8" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <h3 class="element-title">Tendril Lines</h3>
+      <p class="element-body">เส้นที่ไหลออกจากจุดศูนย์กลางเหมือนรากไม้หรือเส้นประสาท สื่อถึงการเชื่อมต่อและการเติบโต องค์ประกอบหลักของ Cybersigilism</p>
+    </div>
+
+    <div class="element-card">
+      <div class="element-num">02</div>
+      <div class="element-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M20 6 L23 17 L20 28 L17 17 Z" fill="#c8c0a8" opacity="0.7"/>
+          <path d="M6 20 L17 23 L28 20 L17 17 Z" fill="#c8c0a8" opacity="0.7"/>
+        </svg>
+      </div>
+      <h3 class="element-title">Star / Sparkle</h3>
+      <p class="element-body">ดาวสี่แฉกหรือดาวแปดแฉกที่เป็นจุดรวมพลังงาน — มาจาก Sigil ดั้งเดิมและกลายเป็น icon สำคัญของ Cybersigilism ยุคใหม่</p>
+    </div>
+
+    <div class="element-card">
+      <div class="element-num">03</div>
+      <div class="element-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4 L20 36 M10 15 L30 15" stroke="#c8c0a8" stroke-width="1.8"/>
+          <path d="M14 4 Q20 2 26 4" stroke="#c8c0a8" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <h3 class="element-title">Gothic Cross</h3>
+      <p class="element-body">กางเขนที่มีสัดส่วนแบบ Gothic — มักมีลายแกะสลักหรือเส้น Cyber ไหลออกมา เป็นตัวแทนของรากเหง้า Gothic ใน Black Gothic</p>
+    </div>
+
+    <div class="element-card">
+      <div class="element-num">04</div>
+      <div class="element-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M8 36 L8 20 Q8 8 20 6 Q32 8 32 20 L32 36" stroke="#c8c0a8" stroke-width="1.2"/>
+          <path d="M4 36 L4 22 Q4 4 20 2 Q36 4 36 22 L36 36" stroke="#c8c0a8" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <h3 class="element-title">Gothic Arch</h3>
+      <p class="element-body">ซุ้มโค้งแหลมที่มาจากสถาปัตยกรรมโบสถ์ยุคกลาง — ให้โครงสร้างแนวตั้งและความรู้สึกสูงส่ง มักใช้เป็น frame ของลายทั้งหมด</p>
+    </div>
+
+    <div class="element-card">
+      <div class="element-num">05</div>
+      <div class="element-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M8 20 Q2 16 2 10 Q6 14 10 13 M8 20 Q2 24 2 30 Q6 26 10 27" stroke="#c8c0a8" stroke-width="1"/>
+          <path d="M32 20 Q38 16 38 10 Q34 14 30 13 M32 20 Q38 24 38 30 Q34 26 30 27" stroke="#c8c0a8" stroke-width="1"/>
+          <path d="M8 20 L32 20" stroke="#c8c0a8" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <h3 class="element-title">Thorns & Barbs</h3>
+      <p class="element-body">หนามที่งอกออกจากเส้นหลัก สื่อถึงการป้องกันและความเจ็บปวดที่งดงาม — มักปรากฏตามขอบลายหรือกิ่งก้านของ Tendril</p>
+    </div>
+
+    <div class="element-card">
+      <div class="element-num">06</div>
+      <div class="element-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M15 10 L14 16 L10 18 L14 20 L13 26 L18 22 L20 28 L22 22 L27 26 L26 20 L30 18 L26 16 L25 10 L20 14 Z" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <text x="12" y="35" font-size="7" fill="#c8c0a8" opacity="0.6" font-family="serif">ᚱᚢᚾᛖ</text>
+        </svg>
+      </div>
+      <h3 class="element-title">Rune Marks & Script</h3>
+      <p class="element-body">ตัวอักษรหรือสัญลักษณ์ที่อ่านไม่ออกซึ่งกระจายอยู่ทั่วลาย — อาจเป็น Rune โบราณ, ตัวอักษรสมมติ หรือข้อความที่ถูกแปลงเป็นรหัส สร้างความลึกลับและมิติให้กับงาน</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARE TABLE -->
+<section id="compare">
+  <div class="section-label">// 04 — เปรียบเทียบ</div>
+  <h2 class="section-title">Cyber vs Gothic<br>vs Black Gothic</h2>
+  <div class="divider"></div>
+  <div class="compare-table-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>องค์ประกอบ</th>
+          <th>Cybersigilism</th>
+          <th>Gothic</th>
+          <th>Black Gothic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-label">รูปทรง</td>
+          <td>ไหลลื่น, อินทรีย์, เรขาคณิต</td>
+          <td>ตรง, สมมาตร, สถาปัตยกรรม</td>
+          <td>ผสม — ลื่นไหลบนโครงแข็ง</td>
+        </tr>
+        <tr>
+          <td class="td-label">สี</td>
+          <td>เงิน, ดำ, โลหะ</td>
+          <td>ดำ, แดงเข้ม, ทอง</td>
+          <td>ขาว-ดำ เท่านั้น</td>
+        </tr>
+        <tr>
+          <td class="td-label">พลังงาน</td>
+          <td>ดิจิทัล, อนาคต, ไฟฟ้า</td>
+          <td>โบราณ, มรณะ, โรแมนติก</td>
+          <td>ดิบ, ลึก, มีชีวิต</td>
+        </tr>
+        <tr>
+          <td class="td-label">แรงบันดาลใจ</td>
+          <td>Cyberpunk, AI, วงจร</td>
+          <td>โบสถ์, ฮาโลวีน, วรรณกรรมมืด</td>
+          <td>ทั้งสอง + ความเป็นส่วนตัว</td>
+        </tr>
+        <tr>
+          <td class="td-label">เสื้อผ้า</td>
+          <td>Tattoo → Streetwear สมัยใหม่</td>
+          <td>Corset, Lace, Cape</td>
+          <td>Oversized tee, Streetwear</td>
+        </tr>
+        <tr>
+          <td class="td-label">ผู้สวมใส่</td>
+          <td>Gen Z, Digital Native</td>
+          <td>Alternative, Subculture</td>
+          <td>
+            คนที่ไม่ต้องการ fit in
+            <div style="margin-top:0.5rem; font-size:0.8rem; color:rgba(200,192,168,0.45); line-height:1.6;">= แต่งตัวเพื่อตัวเอง ไม่ใช่เพื่อให้คนอื่นยอมรับ</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-band">
+  <div class="cta-eyebrow">// ให้เสื้อของคุณพูดแทนตัวเอง</div>
+  <h2 class="cta-title">Ready to<br>Wear the Ink?</h2>
+  <p class="cta-sub">Custom ลายได้ หรือเลือกจาก Ready-made</p>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary"><span>สั่ง Custom</span></a>
+    <a href="gallery.html" class="btn-primary"><span>ดูผลงาน</span></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="footer-logo">Black <span>Gothic</span></a>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="style.html">Style Guide</a>
+    <a href="warranty.html">Warranty</a>
+    <a href="order.html">Order</a>
+  </div>
+  <span class="footer-copy">© 2026 Black Gothic — All Rights Reserved</span>
+</footer>
+
+<script>
+  // Cursor
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  document.addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px';
+    ring.style.left = e.clientX + 'px'; ring.style.top = e.clientY + 'px';
+  });
+
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Timeline scroll reveal
+  const items = document.querySelectorAll('.timeline-item');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.2 });
+  items.forEach(i => obs.observe(i));
+</script>
+
+<!-- ============================================================
+     MOBILE BOTTOM NAV HTML
+     วางก่อน </body> — แสดงเฉพาะมือถือผ่าน CSS
+============================================================ -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav">
+
+  <!-- Home -->
+  <a href="index.html" class="mob-nav-item" id="mbn-home">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    </div>
+    <span>Home</span>
+  </a>
+
+  <!-- Style (active บนหน้านี้) -->
+  <a href="style.html" class="mob-nav-item active" id="mbn-style">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    </div>
+    <span>Style</span>
+  </a>
+
+  <!-- Gallery -->
+  <a href="gallery.html" class="mob-nav-item" id="mbn-gallery">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <span>Gallery</span>
+  </a>
+
+  <!-- Order -->
+  <a href="order.html" class="mob-nav-item" id="mbn-order">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    </div>
+    <span>Order</span>
+  </a>
+
+  <!-- Contact -->
+  <a href="index.html#contact" class="mob-nav-item" id="mbn-contact">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </div>
+    <span>Contact</span>
+  </a>
+
+</nav>
+</body>
+</html>

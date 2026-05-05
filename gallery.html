@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080808">
+<title>Gallery | ผลงานเพ้นเสื้อ Custom Cybersigilism Gothic — BLACK GOTHIC</title>
+<!-- SEO Meta Tags -->
+<meta name="description" content="ผลงานเพ้นเสื้อ Custom ลาย Cybersigilism และ Gothic จาก Black Gothic ทั้งเสื้อพร้อมขาย Limited Edition และผลงาน Custom Commission ของลูกค้า">
+<meta name="keywords" content="รับเพ้นเสื้อ, custom paint เสื้อ, เสื้อ gothic, cybersigilism, เสื้อลายเส้น, streetwear ไทย, เพ้นเสื้อ custom, ผลงาน custom, เสื้อสตรีท">
+<meta name="robots" content="index, follow">
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Gallery — BLACK GOTHIC | Custom Painted Apparel">
+<meta property="og:description" content="ผลงานเพ้นเสื้อ Custom ลาย Cybersigilism + Gothic เฉพาะตัว ทั่วประเทศ">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/og-preview.jpg">
+<meta property="og:url" content="https://blackgothic.com/gallery">
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gallery — BLACK GOTHIC | Custom Painted Apparel">
+<meta name="twitter:description" content="ผลงานเพ้นเสื้อ Custom ลาย Cybersigilism + Gothic เฉพาะตัว">
+<!-- Canonical -->
+<link rel="canonical" href="https://blackgothic.com/gallery">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    color-scheme: dark;
+    --black: #080808;
+    --white: #f0ede6;
+    --gray-dark: #1a1a1a;
+    --gray-mid: #2e2e2e;
+    --gray-line: #333;
+    --accent: #c8c0a8;
+    --accent-glow: #e8e0cc;
+    --red-dark: #8b1a1a;
+    --sold: #5a1a1a;
+    --sold-text: #e07070;
+    --available: #1a3a1a;
+    --available-text: #70c080;
+  }
+
+  html { scroll-behavior: smooth; background-color: #080808 !important; }
+
+  body {
+    background: var(--black) !important;
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+
+  /* === NOISE OVERLAY === */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+  }
+
+  /* === CURSOR === */
+  .cursor-dot {
+    position: fixed; width: 6px; height: 6px;
+    background: var(--white); border-radius: 50%;
+    pointer-events: none; z-index: 10000;
+    transition: transform 0.1s; transform: translate(-50%, -50%);
+  }
+  .cursor-ring {
+    position: fixed; width: 32px; height: 32px;
+    border: 1px solid rgba(200,192,168,0.5); border-radius: 50%;
+    pointer-events: none; z-index: 9999;
+    transition: transform 0.15s ease, width 0.2s, height 0.2s, border-color 0.2s;
+    transform: translate(-50%, -50%);
+  }
+
+  /* === NAV === */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 1.5rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(8,8,8,0.85); backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    font-family: 'Metal Mania', cursive; font-size: 1.25rem;
+    letter-spacing: 0.05em; color: var(--white); text-decoration: none;
+    text-transform: uppercase; transition: opacity 0.3s; line-height: 1;
+  }
+  .nav-logo:hover { opacity: 0.75; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    letter-spacing: 0.18em; color: rgba(240,237,230,0.55);
+    text-decoration: none; text-transform: uppercase; transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+
+  /* === PAGE HEADER === */
+  .page-header {
+    padding: 14rem 3rem 6rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--gray-line);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .page-header-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,192,168,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,192,168,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .page-eyebrow {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.4em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0; animation: fade-up 0.8s 0.2s forwards;
+  }
+  .page-title {
+    font-family: 'Metal Mania', cursive;
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-weight: 400; line-height: 1; color: var(--white);
+    letter-spacing: 0.02em; text-transform: uppercase;
+    text-shadow: 0 0 40px rgba(200,192,168,0.1);
+    margin-bottom: 1rem;
+    opacity: 0; animation: fade-up 0.8s 0.4s forwards;
+  }
+  .page-title span { color: var(--accent); }
+  .page-desc {
+    font-size: 1rem; line-height: 1.85; font-weight: 300;
+    color: rgba(240,237,230,0.5); max-width: 520px;
+    opacity: 0; animation: fade-up 0.8s 0.6s forwards;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* === SECTION TABS === */
+  .gallery-tabs {
+    position: sticky; top: 72px; z-index: 100;
+    background: rgba(8,8,8,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-line);
+    padding: 0 3rem;
+    display: flex; gap: 0;
+  }
+  .gallery-tab {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(240,237,230,0.4); padding: 1.25rem 2rem;
+    border-bottom: 2px solid transparent;
+    cursor: pointer; transition: color 0.3s, border-color 0.3s;
+    border-top: none; border-left: none; border-right: none;
+    background: none; white-space: nowrap;
+  }
+  .gallery-tab:hover { color: var(--white); }
+  .gallery-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* === SECTIONS === */
+  .gallery-section { display: none; padding: 5rem 3rem 8rem; }
+  .gallery-section.active { display: block; }
+
+  .section-header {
+    max-width: 1200px; margin: 0 auto 4rem;
+  }
+  .section-label-text {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.4em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .section-heading {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.15;
+  }
+  .section-divider { width: 50px; height: 1px; background: var(--accent); margin-bottom: 1.5rem; }
+  .section-subdesc {
+    font-size: 0.9rem; line-height: 1.85; color: rgba(240,237,230,0.45);
+    font-weight: 300; max-width: 560px;
+  }
+
+  /* === SHOP GRID === */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .shop-card {
+    background: var(--gray-dark);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex; flex-direction: column;
+  }
+  .shop-card:hover { background: #1f1f1f; }
+
+  .shop-card-image {
+    aspect-ratio: 3/4;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .shop-card-image .placeholder-sigil {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .shop-card-image .placeholder-sigil svg { width: 55%; opacity: 0.18; }
+  .shop-card-image .cs-label {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    font-family: 'Space Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 0.3em; color: rgba(200,192,168,0.3);
+    text-transform: uppercase; text-align: center; pointer-events: none;
+    line-height: 2;
+  }
+  .shop-card-image img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.5s ease;
+  }
+  .shop-card:hover .shop-card-image img { transform: scale(1.05); }
+
+  /* Status badge */
+  .status-badge {
+    position: absolute; top: 1rem; left: 1rem;
+    font-family: 'Space Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 0.3rem 0.75rem; z-index: 2;
+  }
+  .status-badge.sold {
+    background: rgba(90,26,26,0.85);
+    border: 1px solid rgba(224,112,112,0.4);
+    color: var(--sold-text);
+  }
+  .status-badge.available {
+    background: rgba(26,58,26,0.85);
+    border: 1px solid rgba(112,192,128,0.4);
+    color: var(--available-text);
+  }
+  .status-badge.example {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    color: var(--black);
+  }
+
+  /* Corner deco */
+  .card-corner { position: absolute; width: 14px; height: 14px; border-color: rgba(200,192,168,0.25); border-style: solid; }
+  .card-corner.tl { top: 8px; left: 8px; border-width: 1px 0 0 1px; }
+  .card-corner.br { bottom: 8px; right: 8px; border-width: 0 1px 1px 0; }
+
+  .shop-card-info {
+    padding: 1.25rem 1.5rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; flex-direction: column; gap: 0.4rem;
+    flex: 1;
+  }
+  .card-series {
+    font-family: 'Space Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.2em; color: var(--accent); text-transform: uppercase;
+  }
+  .card-name {
+    font-family: 'Rajdhani', sans-serif; font-size: 1.05rem;
+    font-weight: 600; color: var(--white); letter-spacing: 0.05em;
+  }
+  .card-price-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+  .card-price {
+    font-family: 'Space Mono', monospace; font-size: 0.75rem;
+    letter-spacing: 0.1em; color: var(--accent); font-weight: 700;
+  }
+  .card-price.tbd { color: rgba(200,192,168,0.35); font-size: 0.6rem; }
+  .card-status-text {
+    font-family: 'Space Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .card-status-text.sold { color: var(--sold-text); }
+  .card-status-text.available { color: var(--available-text); }
+
+  /* === CUSTOM GRID === */
+  .custom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .custom-card {
+    background: var(--gray-dark); position: relative;
+    overflow: hidden; cursor: pointer; transition: background 0.3s;
+  }
+  .custom-card:hover { background: #1f1f1f; }
+  .custom-card-image {
+    aspect-ratio: 4/5; background: #0d0d0d;
+    position: relative; overflow: hidden;
+  }
+  .custom-card-image img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.5s ease;
+  }
+  .custom-card:hover .custom-card-image img { transform: scale(1.05); }
+  .custom-card-image .placeholder-sigil {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .custom-card-image .placeholder-sigil svg { width: 50%; opacity: 0.15; }
+  .custom-card-image .cs-label {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    font-family: 'Space Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 0.3em; color: rgba(200,192,168,0.28);
+    text-transform: uppercase; text-align: center; pointer-events: none;
+    line-height: 2;
+  }
+  .custom-card-info {
+    padding: 1.1rem 1.25rem 1.4rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .custom-card-label {
+    font-family: 'Space Mono', monospace; font-size: 0.56rem;
+    letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .custom-card-title {
+    font-family: 'Rajdhani', sans-serif; font-size: 1rem;
+    font-weight: 600; color: var(--white); letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+  }
+  .custom-card-desc {
+    font-size: 0.82rem; line-height: 1.7;
+    color: rgba(240,237,230,0.4); font-weight: 300;
+  }
+
+  /* === EMPTY STATE === */
+  .empty-notice {
+    text-align: center; padding: 5rem 2rem;
+    border: 1px solid rgba(200,192,168,0.1);
+    max-width: 480px; margin: 0 auto;
+  }
+  .empty-notice p {
+    font-family: 'Space Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.25em; color: rgba(200,192,168,0.25);
+    text-transform: uppercase; line-height: 2;
+  }
+
+  /* === CTA CONTACT === */
+  .gallery-contact-cta {
+    text-align: center; margin-top: 5rem; padding: 4rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    max-width: 1200px; margin: 5rem auto 0;
+  }
+  .gallery-contact-cta p {
+    font-family: 'Space Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.25em; color: rgba(240,237,230,0.35);
+    text-transform: uppercase; margin-bottom: 1.5rem;
+  }
+  .gallery-contact-cta h3 {
+    font-family: 'Cinzel Decorative', serif; font-size: 1.6rem;
+    font-weight: 700; color: var(--white); margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  .gallery-contact-cta .sub {
+    font-size: 0.9rem; color: rgba(240,237,230,0.4); font-weight: 300;
+    line-height: 1.8; max-width: 420px; margin: 0 auto 2.5rem;
+    font-family: 'Rajdhani', sans-serif; letter-spacing: 0; text-transform: none;
+  }
+  .btn-contact-ig {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    padding: 0.9rem 2.5rem; border: 1px solid rgba(200,192,168,0.35);
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--white); text-decoration: none;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .btn-contact-ig::before {
+    content: ''; position: absolute; inset: 0;
+    background: var(--accent); transform: translateX(-101%);
+    transition: transform 0.35s ease; z-index: 0;
+  }
+  .btn-contact-ig:hover::before { transform: translateX(0); }
+  .btn-contact-ig:hover { color: var(--black); border-color: var(--accent); }
+  .btn-contact-ig span { position: relative; z-index: 1; }
+
+  /* === FOOTER === */
+  footer {
+    border-top: 1px solid var(--gray-line);
+    padding: 2rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+  }
+  .footer-logo {
+    font-family: 'Metal Mania', cursive; font-size: 1rem;
+    letter-spacing: 0.1em; color: var(--white); text-transform: uppercase;
+  }
+  .footer-copy {
+    font-family: 'Space Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 0.18em; color: rgba(240,237,230,0.2);
+    text-transform: uppercase;
+  }
+
+  /* === REVEAL === */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* === LIGHTBOX (Multi-image) === */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  }
+  .lightbox.open { opacity: 1; pointer-events: all; }
+  .lightbox-bd {
+    position: absolute; inset: 0; background: rgba(4,4,4,0.95);
+    backdrop-filter: blur(10px);
+  }
+  .lightbox-body {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center;
+    max-width: 90vw; max-height: 90vh;
+    gap: 0;
+  }
+
+  /* Main image viewer */
+  .lb-main-wrap {
+    width: min(460px, 82vw); aspect-ratio: 3/4;
+    border: 1px solid var(--gray-line);
+    background: #111; overflow: hidden; position: relative;
+  }
+  .lb-main-slide {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .lb-main-slide.active { opacity: 1; pointer-events: all; }
+  .lb-main-slide img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .lb-main-slide .lb-slide-sigil {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lb-main-slide .lb-slide-sigil svg { width: 52%; opacity: 0.2; }
+  .lb-slide-label-badge {
+    position: absolute; bottom: 0.75rem; left: 0.75rem;
+    font-family: 'Space Mono', monospace; font-size: 0.5rem;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    background: rgba(8,8,8,0.75); border: 1px solid rgba(200,192,168,0.25);
+    color: var(--accent);
+  }
+  /* Image nav arrows inside main frame */
+  .lb-img-prev, .lb-img-next {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; z-index: 5;
+    border: 1px solid rgba(200,192,168,0.25); background: rgba(8,8,8,0.6);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-size: 1rem; transition: border-color 0.2s, background 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .lb-img-prev { left: 0.6rem; }
+  .lb-img-next { right: 0.6rem; }
+  .lb-img-prev:hover, .lb-img-next:hover { border-color: var(--accent); background: rgba(200,192,168,0.12); }
+  .lb-img-prev.hidden, .lb-img-next.hidden { display: none; }
+
+  /* Counter inside frame */
+  .lb-img-counter {
+    position: absolute; top: 0.65rem; right: 0.75rem; z-index: 5;
+    font-family: 'Space Mono', monospace; font-size: 0.5rem;
+    letter-spacing: 0.18em; color: rgba(240,237,230,0.45);
+    background: rgba(8,8,8,0.6); padding: 0.2rem 0.5rem;
+    border: 1px solid rgba(200,192,168,0.12);
+  }
+
+  /* Thumbnails strip */
+  .lb-thumbs {
+    display: flex; gap: 4px; margin-top: 8px;
+    width: min(460px, 82vw); overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .lb-thumbs::-webkit-scrollbar { display: none; }
+  .lb-thumb {
+    flex-shrink: 0; width: 62px; height: 80px;
+    border: 1px solid rgba(200,192,168,0.15); background: #111;
+    overflow: hidden; cursor: pointer; position: relative;
+    transition: border-color 0.2s;
+  }
+  .lb-thumb.active { border-color: var(--accent); }
+  .lb-thumb:hover { border-color: rgba(200,192,168,0.5); }
+  .lb-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lb-thumb .lb-thumb-sigil {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: #0d0d0d;
+  }
+  .lb-thumb .lb-thumb-sigil svg { width: 60%; opacity: 0.18; }
+  .lb-thumb-badge {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    font-family: 'Space Mono', monospace; font-size: 0.38rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    text-align: center; padding: 0.18rem 0;
+    background: rgba(8,8,8,0.8); color: rgba(200,192,168,0.55);
+  }
+
+  /* Meta row */
+  .lightbox-meta {
+    margin-top: 0.85rem; text-align: center; display: flex; flex-direction: column; gap: 0.28rem;
+  }
+  .lb-label {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.3em; color: var(--accent); text-transform: uppercase;
+  }
+  .lb-title {
+    font-family: 'Rajdhani', sans-serif; font-size: 1.05rem;
+    font-weight: 600; color: var(--white); letter-spacing: 0.06em;
+  }
+  .lb-price {
+    font-family: 'Space Mono', monospace; font-size: 0.7rem;
+    color: var(--accent); letter-spacing: 0.12em; margin-top: 0.1rem;
+  }
+  .lb-status {
+    font-family: 'Space Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .lb-status.sold { color: var(--sold-text); }
+  .lb-status.available { color: var(--available-text); }
+
+  /* Close & card-nav (prev/next card) */
+  .lb-close {
+    position: fixed; top: 1.5rem; right: 1.75rem;
+    width: 40px; height: 40px; border: 1px solid rgba(240,237,230,0.2);
+    background: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    z-index: 3; transition: border-color 0.3s; color: var(--white); font-size: 1.1rem;
+  }
+  .lb-close:hover { border-color: var(--accent); }
+  .lb-nav {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px; border: 1px solid rgba(240,237,230,0.12);
+    background: rgba(8,8,8,0.55); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    z-index: 3; transition: border-color 0.3s; color: rgba(240,237,230,0.4); font-size: 1rem;
+    backdrop-filter: blur(4px);
+  }
+  .lb-nav:hover { border-color: rgba(200,192,168,0.4); color: var(--white); }
+  .lb-nav.prev { left: 1.5rem; }
+  .lb-nav.next { right: 1.5rem; }
+
+  /* Card indicator dots */
+  .lb-card-dots {
+    position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 3;
+  }
+  .lb-card-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: rgba(200,192,168,0.2); transition: background 0.2s;
+  }
+  .lb-card-dot.active { background: var(--accent); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1.25rem 1.5rem; }
+    .page-header { padding: 10rem 1.5rem 4rem; }
+    .gallery-tabs { padding: 0 1.5rem; overflow-x: auto; }
+    .gallery-section { padding: 3rem 1.5rem 5rem; }
+    .shop-grid, .custom-grid { grid-template-columns: repeat(2, 1fr); gap: 2px; }
+    footer { padding: 1.5rem; }
+  }
+
+  /* ============================================================
+     MOBILE BOTTOM NAV
+     แสดงเฉพาะหน้าจอ ≤ 900px (มือถือ/แท็บเล็ต)
+  ============================================================ */
+
+  /* ซ่อน nav บนเมื่ออยู่บนมือถือ */
+  @media (max-width: 900px) {
+    nav { display: none !important; }
+  }
+
+  /* แถบ nav ติดด้านล่าง — ซ่อนบนคอมโดยดีฟอลต์ */
+  .mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 64px;
+    background: rgba(8,8,8,0.96);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(200,192,168,0.12);
+    z-index: 2000;
+    padding: 0;
+    padding-bottom: env(safe-area-inset-bottom); /* รองรับ iPhone notch */
+  }
+
+  /* แสดงเฉพาะมือถือ */
+  @media (max-width: 900px) {
+    .mobile-bottom-nav { display: flex !important; }
+    /* เว้นช่องว่างให้ content ไม่ถูก nav บัง */
+    body { padding-bottom: 72px; }
+  }
+
+  /* แต่ละปุ่ม */
+  .mob-nav-item {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 4px;
+    color: rgba(200,192,168,0.38);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.48rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.25s;
+    position: relative;
+    padding-top: 4px;
+  }
+
+  /* ปุ่มที่ active — เปลี่ยนสีเป็น accent */
+  .mob-nav-item.active {
+    color: var(--accent);
+  }
+
+  /* icon SVG */
+  .mob-nav-icon {
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mob-nav-icon svg {
+    width: 100%; height: 100%;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+</style>
+<!-- Code injected by Five-server -->
+  <script async data-id="five-server" data-file="c:\Black1gothic\app\gallery.html" type="application/javascript" src="/fiveserver.js"></script>
+  </head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Black <span>Gothic</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="style.html" >Style</a></li>
+    <!-- <li><a href="index.html#contact">Order</a></li> -->
+    <li><a href="warranty.html">Warranty</a></li>
+    <li><a href="care.html">Care</a></li>
+    <li><a href="order.html">Order</a></li>
+  </ul>
+</nav>
+<!-- PAGE HEADER -->
+<div style="max-width:1400px; margin:0 auto;">
+  <div class="page-header">
+    <div class="page-header-bg"></div>
+    <p class="page-eyebrow">Portfolio & Collection</p>
+    <h1 class="page-title">Gallery<br><span>ผลงาน</span></h1>
+    <p class="page-desc">
+      ผลงานทั้งหมดของ Black Gothic — ทั้งเสื้อพร้อมขายที่ร้านออกแบบเอง
+      และงาน Custom ที่ลูกค้ามาสั่งทำเฉพาะตัว
+    </p>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="gallery-tabs">
+  <button class="gallery-tab active" data-target="shop">ผลงานเสื้อขายที่ร้าน</button>
+  <button class="gallery-tab" data-target="custom">ผลงาน Custom ลูกค้า</button>
+</div>
+
+<!-- ======================== SECTION: SHOP (เสื้อขายที่ร้าน) ======================== -->
+<div class="gallery-section active" id="sec-shop">
+  <div class="section-header reveal">
+    <p class="section-label-text">Ready to Wear Collection</p>
+    <h2 class="section-heading">เสื้อเพ้นพร้อมขาย</h2>
+    <div class="section-divider"></div>
+    <p class="section-subdesc">
+      คอลเลกชันที่ทางร้านออกแบบและเพ้นเอง Limited Edition ทุกตัว ไม่มีลายซ้ำ
+      ดูสถานะและราคาได้ที่แต่ละชิ้น — ทัก DM ใน IG เพื่อจอง
+    </p>
+  </div>
+
+  <div class="shop-grid">
+
+    <!-- ============================================================
+         SHOP CARD 1 — วิธีใส่รูป:
+         1. data-images → ใส่ path รูปทุกมุมสำหรับ Lightbox (popup)
+         2. <img src="..."> → รูป thumbnail บนการ์ด (ใช้รูปเดียวกับมุมแรก)
+         3. data-lb-price → ราคาจริง
+         4. data-lb-status → "available" หรือ "sold"
+         5. status-badge → เปิดคอมเมนต์ให้แบดจ์โชว์
+         6. card-name / card-price / card-status-text → เปิดคอมเมนต์ให้ข้อความโชว์
+    ============================================================ -->
+    <!-- Card 1 -->
+    <div class="shop-card reveal"
+      data-lb-title="Black Gothic 007"
+      data-lb-label="Pattern size M"
+      data-lb-size="Size M"
+      data-lb-price="฿2,500"
+      data-lb-status="available"
+      data-images='[
+        {"src":"img/Black Gothic 001.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/Black Gothic 002.jpg",   "label":"หลังเสื้อ"},
+        {"src":"img/Black Gothic 01.jpg", "label":"Detail"},
+        {"src":"img/Black Gothic 02.jpg", "label":"Sleeve"}
+      ]'>
+      <div class="shop-card-image" aria-label="เพ้นเสื้อ Custom ลาย Cybersigilism Occult Drop สไตล์ Gothic ขาวดำ">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ (รูปเดียวกับมุมแรกใน data-images) -->
+        <img src="img/Black Gothic 001.jpg" alt="Occult Drop No.001" class="main-product-image">
+        <div class="card-corner tl"></div>
+        <div class="card-corner br"></div>
+        <!-- 👇 เปิดคอมเมนต์บรรทัดนี้ถ้าต้องการแสดง badge สถานะมุมบนซ้าย -->
+        <span class="status-badge example">● ตัวอย่างต้นแบบ</span>
+      </div>
+      <div class="shop-card-info">
+        <span class="card-series">Cybersigilism</span>
+        <!-- 👇 เปิดคอมเมนต์เพื่อให้ชื่อสินค้าโชว์ -->
+        <span class="card-name">Black Gothic 007</span>
+        <div class="card-price-row">
+          <!-- 👇 เปิดคอมเมนต์เพื่อให้ราคาและสถานะโชว์ใต้การ์ด -->
+           <span class="card-label">Pattern size M</span>
+          <span class="card-size">Size M</span>
+          <span class="card-price">$$$ ฿</span> 
+          <span class="card-status-text available">ต้นแบบ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="shop-card reveal"
+      data-lb-title="White Demon’s Eye"
+      data-lb-label="Pattern size XL"
+      data-lb-size="Size XL"
+      data-lb-price="250 ฿"
+      data-lb-status="available"
+      data-images='[
+        {"src":"img/1.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/2.jpg",   "label":"หลังเสื้อ"},
+        {"src":"img/001.jpg", "label":"Detail"},
+        {"src":"img/002.jpg", "label":"Sleeve"}
+      ]'>
+      <div class="shop-card-image" aria-label="ผลงานเพ้นเสื้อ Sigil Series ลายเส้น Gothic สไตล์ขาวดำ">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="img/1.jpg" alt="Sigil Series No.001" class="main-product-image">
+        <div class="card-corner tl"></div>
+        <div class="card-corner br"></div>
+        <!-- 👇 เปลี่ยน available → sold ถ้าขายแล้ว, และเปลี่ยน class เป็น sold ด้วย -->
+        <span class="status-badge available">● พร้อมขาย</span>
+        <!-- ถ้าขายแล้ว ใช้บรรทัดนี้แทน: <span class="status-badge sold">✕ ขายแล้ว</span> -->
+      </div>
+      <div class="shop-card-info">
+        <span class="card-series">Cybersigilism & Gothic</span>
+        <span class="card-name">White Demon’s Eye</span>
+        <div class="card-price-row">
+          <span class="card-label">Pattern size XL</span>
+          <span class="card-size">Size XL</span>
+          <span class="card-price">299 ฿</span>
+          <span class="card-status-text available">พร้อมขาย</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="shop-card reveal"
+      data-lb-title="White Crying king"
+      data-lb-label="Pattern size L"
+      data-lb-size="Size XL"
+      data-lb-price="299 ฿"
+      data-lb-status="available"
+      data-images='[
+        {"src":"img/White Crying king 001.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/White Crying king 002.jpg",   "label":"หลังเสื้อ"},
+        {"src":"img/White Crying king 01.jpg", "label":"Detail"},
+        {"src":"img/White Crying king 02.jpg", "label":"Sleeve"}
+      ]'>
+      <div class="shop-card-image" aria-label="เพ้นเสื้อ Custom Limited Edition ลาย Gothic Streetwear เฉพาะตัว">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="img/White Crying king 001.jpg" alt="Limited Edition No.001" class="main-product-image">
+        <div class="card-corner tl"></div>
+        <div class="card-corner br"></div>
+        <span class="status-badge available">● พร้อมขาย</span>
+      </div>
+      <div class="shop-card-info">
+        <span class="card-series">Exclusive</span>
+        <span class="card-name">White Crying king</span>
+        <div class="card-price-row">
+          <span class="card-label">Pattern size L</span>
+          <span class="card-size">Size XL</span>
+          <span class="card-price">299 ฿</span>
+          <span class="card-status-text available">พร้อมขาย</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="shop-card reveal"
+      data-lb-title="Black skeleton"
+      data-lb-label="Pattern size L+"
+      data-lb-size="Size XL"
+      data-lb-price="299 ฿"
+      data-lb-status="available"
+      data-images='[
+        {"src":"img/Black skeleton 001.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/Black skeleton 002.jpg",   "label":"หลังเสื้อ"},
+        {"src":"img/Black skeleton 01.jpg", "label":"Detail"},
+        {"src":"img/Black skeleton 02.jpg", "label":"Sleeve"}
+      ]'>
+      <div class="shop-card-image" aria-label="เพ้นเสื้อ Custom ลาย Cybersigilism Occult Geometry สไตล์ Dark Art">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="img/Black skeleton 001.jpg" alt="Occult Geometry No.002" class="main-product-image">
+        <div class="card-corner tl"></div>
+        <div class="card-corner br"></div>
+        <span class="status-badge available">● พร้อมขาย</span>
+      </div>
+      <div class="shop-card-info">
+        <span class="card-series">Dark Art</span>
+        <span class="card-name">Black skeleton</span>
+        <div class="card-price-row">
+          <span class="card-label">Pattern size L+</span>
+          <span class="card-size">Size XL</span>
+          <span class="card-price">299 ฿</span>
+          <span class="card-status-text available">พร้อมขาย</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="shop-card reveal"
+      data-lb-label="Streetwear"
+      data-lb-title="Fragment No.001"
+      data-lb-price="฿---"
+      data-lb-status="available"
+      data-images='[
+        {"src":"----",  "label":"หน้าเสื้อ"},
+        {"src":"----",   "label":"หลังเสื้อ"},
+        {"src":"----", "label":"Detail"},
+        {"src":"----", "label":"Sleeve"}
+      ]'>
+      <div class="shop-card-image" aria-label="เสื้อสตรีท Gothic Streetwear เพ้นลาย Custom Fragment ลายเส้นขาวดำ">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="----" alt="Fragment No.001" class="main-product-image">
+        <div class="card-corner tl"></div>
+        <div class="card-corner br"></div>
+        <span class="status-badge available">● พร้อมขาย</span>
+      </div>
+      <div class="shop-card-info">
+        <span class="card-series">Streetwear</span>
+        <span class="card-name">Fragment No.001</span>
+        <div class="card-price-row">
+          <!-- <span class="card-price">฿2,500</span>
+          <span class="card-status-text available">พร้อมขาย</span> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="shop-card reveal"
+      data-lb-label="Gothic"
+      data-lb-title="Void Pattern No.001"
+      data-lb-price="฿---"
+      data-lb-status="available"
+      data-images='[
+        {"src":"----",  "label":"หน้าเสื้อ"},
+        {"src":"----",   "label":"หลังเสื้อ"},
+        {"src":"----", "label":"Detail"},
+        {"src":"----", "label":"Sleeve"}
+      ]'>
+      <div class="shop-card-image" aria-label="เพ้นเสื้อ Custom ลาย Gothic Void Pattern ลายเส้นขาวดำ Streetwear">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="----" alt="Void Pattern No.001" class="main-product-image">
+        <div class="card-corner tl"></div>
+        <div class="card-corner br"></div>
+        <span class="status-badge available">● พร้อมขาย</span>
+      </div>
+      <div class="shop-card-info">
+        <span class="card-series">Gothic</span>
+        <span class="card-name">Void Pattern No.001</span>
+        <div class="card-price-row">
+          <!-- <span class="card-price">฿2,500</span>
+          <span class="card-status-text available">พร้อมขาย</span> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="gallery-contact-cta reveal">
+    <p>Interested in a Piece?</p>
+    <h3>สนใจเสื้อตัวไหน?<br>ทัก DM ได้เลย</h3>
+    <p class="sub">ติดต่อสอบถามสถานะหรือจองเสื้อได้ผ่าน Instagram ของร้าน ทีมงานพร้อมตอบทุกวัน</p>
+    <a href="https://www.instagram.com/black1gothic?igsh=NnVkcGticWptNnI4" target="_blank" class="btn-contact-ig">
+      <span>📷</span>
+      <span>DM ผ่าน Instagram</span>
+    </a>
+  </div>
+</div>
+
+<!-- ======================== SECTION: CUSTOM (ผลงาน Custom ลูกค้า) ======================== -->
+<div class="gallery-section" id="sec-custom">
+  <div class="section-header reveal">
+    <p class="section-label-text">Client Commissions</p>
+    <h2 class="section-heading">ผลงาน Custom ลูกค้า</h2>
+    <div class="section-divider"></div>
+    <p class="section-subdesc">
+      ผลงานที่ลูกค้านำเสื้อมาให้ทางร้านเพ้นลาย Custom โดยเฉพาะ
+      ทุกชิ้นออกแบบตามไอเดียของเจ้าของ ไม่มีซ้ำในโลก
+    </p>
+  </div>
+
+  <div class="custom-grid">
+
+    <!-- ============================================================
+         CUSTOM CARD — วิธีใส่รูปเหมือน Shop Card ทุกอย่าง
+         ต่างแค่ไม่มี status-badge และ card-price
+         เพิ่ม card-title และ card-desc แทน
+    ============================================================ -->
+    <!-- Custom Card 1 -->
+    <div class="custom-card reveal"
+      data-lb-label="Custom Commission"
+      data-lb-title="Personal Commission No.001"
+      data-lb-price="-"
+      data-lb-status=""
+      data-images='[
+        {"src":"img/dom.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/dom2.jpg", "label":"หลังเสื้อ"}
+      ]'>
+      <!--                          👇 ใส่  aria-label="ผลงาน Custom Commission เพ้นเสื้อลาย Cybersigilism Gothic สัญลักษณ์เรขาคณิต" ตรงนี้ -->
+      <div class="custom-card-image"   >
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="img/dom.jpg" alt="Personal Commission No.001" class="main-product-image">
+      </div>
+      <div class="custom-card-info">
+        <span class="custom-card-label">Custom Commission</span>
+        <!-- 👇 เปิดคอมเมนต์เพื่อให้ชื่อและคำอธิบายโชว์ -->
+        <p class="custom-card-title">Personal Commission No.001</p>
+        <!-- <p class="custom-card-desc">Cybersigilism ผสม Gothic สไตล์ลายสัญลักษณ์เรขาคณิต</p> -->
+      </div>
+    </div>
+
+    <!-- Custom Card 2 -->
+    <div class="custom-card reveal"
+      data-lb-label="Custom Commission"
+      data-lb-title="Personal Commission No.002"
+      data-lb-price="-"
+      data-lb-status=""
+      data-images='[
+        {"src":"img/commission-002-front.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/commission-002-back.jpg",   "label":"หลังเสื้อ"}
+      ]'>
+      <div class="custom-card-image" aria-label="เพ้นเสื้อ Custom Dark Streetwear ลายเส้นอิสระ Gothic Non-Repeat Pattern">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="img/commission-002-front.jpg" alt="Personal Commission No.002" class="main-product-image">
+      </div>
+      <div class="custom-card-info">
+        <span class="custom-card-label">Custom Commission</span>
+        <!-- <p class="custom-card-title">Personal Commission No.002</p>
+        <p class="custom-card-desc">Dark Streetwear ลายเส้นอิสระ Non-Repeat Pattern</p> -->
+      </div>
+    </div>
+
+    <!-- Custom Card 3 -->
+    <div class="custom-card reveal"
+      data-lb-label="Custom Commission"
+      data-lb-title="Personal Commission No.003"
+      data-lb-price="-"
+      data-lb-status=""
+      data-images='[
+        {"src":"img/commission-003-front.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/commission-003-back.jpg",   "label":"หลังเสื้อ"}
+      ]'>
+      <div class="custom-card-image" aria-label="เพ้นเสื้อ Custom Gothic สัญลักษณ์เต็มหลัง Upcycle Streetwear ลายเส้นขาวดำ">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="img/commission-003-front.jpg" alt="Personal Commission No.003" class="main-product-image">
+      </div>
+      <div class="custom-card-info">
+        <span class="custom-card-label">Custom Commission</span>
+        <!-- <p class="custom-card-title">Personal Commission No.003</p>
+        <p class="custom-card-desc">Upcycle เสื้อเก่า เพ้นลายสัญลักษณ์ Gothic แบบเต็มหลัง</p> -->
+      </div>
+    </div>
+
+    <!-- Custom Card 4 -->
+    <div class="custom-card reveal"
+      data-lb-label="Custom Commission"
+      data-lb-title="Personal Commission No.004"
+      data-lb-price="-"
+      data-lb-status=""
+      data-images='[
+        {"src":"img/commission-004-front.jpg",  "label":"หน้าเสื้อ"},
+        {"src":"img/commission-004-back.jpg",   "label":"หลังเสื้อ"}    
+      ]'>
+      <div class="custom-card-image" aria-label="เพ้นเสื้อ Custom Cybersigilism XL เต็มหน้าอก ลายวงกลมซ้อน Gothic Streetwear">
+        <!-- 👇 ใส่ path รูป thumbnail ตรงนี้ -->
+        <img src="img/commission-004-front.jpg" alt="Personal Commission No.004" class="main-product-image">
+      </div>
+      <div class="custom-card-info">
+        <span class="custom-card-label">Custom Commission</span>
+        <!-- <p class="custom-card-title">Personal Commission No.004</p>
+        <p class="custom-card-desc">Cybersigilism ขนาด XL เต็มหน้าอก ลายวงกลมซ้อน</p> -->
+      </div>
+    </div>
+
+  </div>
+
+  <div class="gallery-contact-cta reveal">
+    <p>Want Your Own Custom?</p>
+    <h3>อยากได้เสื้อ Custom<br>ของคุณเอง?</h3>
+    <p class="sub">ทัก DM มาบอกไอเดีย ทีมงานพร้อมออกแบบลายเฉพาะสำหรับคุณโดยเฉพาะ</p>
+    <a href="https://www.instagram.com/black1gothic?igsh=NnVkcGticWptNnI4" target="_blank" class="btn-contact-ig">
+      <span>📷</span>
+      <span>สั่ง Custom ผ่าน Instagram</span>
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">BLACK<span style="opacity:0.5;">1</span>GOTHIC</span>
+  <span class="footer-copy">© 2026 Black Gothic — All Rights Reserved</span>
+</footer>
+
+<!-- LIGHTBOX (Multi-image) -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-bd" id="lbBd"></div>
+  <button class="lb-close" id="lbClose">✕</button>
+  <!-- card prev/next (left/right of screen) -->
+  <button class="lb-nav prev" id="lbPrev" title="การ์ดก่อนหน้า">‹</button>
+  <button class="lb-nav next" id="lbNext" title="การ์ดถัดไป">›</button>
+  <!-- card indicator dots -->
+  <div class="lb-card-dots" id="lbCardDots"></div>
+
+  <div class="lightbox-body">
+    <!-- Main image area -->
+    <div class="lb-main-wrap" id="lbMainWrap">
+      <!-- slides injected by JS -->
+      <button class="lb-img-prev hidden" id="lbImgPrev">‹</button>
+      <button class="lb-img-next hidden" id="lbImgNext">›</button>
+      <span class="lb-img-counter" id="lbImgCounter"></span>
+    </div>
+    <!-- Thumbnail strip -->
+    <div class="lb-thumbs" id="lbThumbs"></div>
+    <!-- Meta -->
+    <div class="lightbox-meta">
+      <span class="lb-title" id="lbTitle"></span>
+      <span class="lb-label" id="lbLabel"></span>
+      <span class="lb-label" id="lbSize"></span>
+      <span class="lb-price" id="lbPrice"></span>
+      <span class="lb-status" id="lbStatus"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ========== CURSOR ========== */
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+  });
+  function animateRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button, .shop-card, .custom-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { ring.style.width = '52px'; ring.style.height = '52px'; ring.style.borderColor = 'rgba(200,192,168,0.8)'; });
+    el.addEventListener('mouseleave', () => { ring.style.width = '32px'; ring.style.height = '32px'; ring.style.borderColor = 'rgba(200,192,168,0.5)'; });
+  });
+
+  /* ========== REVEAL ========== */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 70);
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  /* ========== TABS ========== */
+  const tabs = document.querySelectorAll('.gallery-tab');
+  const sections = document.querySelectorAll('.gallery-section');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('sec-' + tab.dataset.target).classList.add('active');
+      document.querySelectorAll('#sec-' + tab.dataset.target + ' .reveal').forEach((el, i) => {
+        if (!el.classList.contains('visible')) setTimeout(() => el.classList.add('visible'), i * 70);
+      });
+    });
+  });
+
+  /* ========== MULTI-IMAGE LIGHTBOX ========== */
+  const lightbox   = document.getElementById('lightbox');
+  const lbMainWrap = document.getElementById('lbMainWrap');
+  const lbThumbs   = document.getElementById('lbThumbs');
+  const lbImgPrev  = document.getElementById('lbImgPrev');
+  const lbImgNext  = document.getElementById('lbImgNext');
+  const lbImgCtr   = document.getElementById('lbImgCounter');
+  const lbCardDots = document.getElementById('lbCardDots');
+
+  let allCards = [], cardIdx = 0, imgIdx = 0;
+
+  /* --- helpers --- */
+  function getVisibleCards() {
+    return Array.from(document.querySelector('.gallery-section.active').querySelectorAll('[data-lb-title]'));
+  }
+
+  /* 
+    Build slides array from a card.
+    Each card has:  data-images='[{"src":"path.jpg","label":"หน้าเสื้อ"},...]'
+    If no src, we clone the placeholder-sigil SVG.
+  */
+  function buildSlides(card) {
+    let images = [];
+    try { images = JSON.parse(card.dataset.images || '[]'); } catch(e) {}
+    if (!images.length) images = [{ label: 'รูปภาพ' }];
+
+    // Get placeholder sigil HTML (used when no src)
+    const sigilEl = card.querySelector('.placeholder-sigil');
+    const sigilHTML = sigilEl ? sigilEl.innerHTML : '';
+
+    return images.map((img, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'lb-main-slide' + (i === 0 ? ' active' : '');
+
+      if (img.src) {
+        const im = document.createElement('img');
+        im.src = img.src; im.alt = img.label || '';
+        slide.appendChild(im);
+      } else {
+        const ph = document.createElement('div');
+        ph.className = 'lb-slide-sigil';
+        ph.innerHTML = sigilHTML;
+        slide.appendChild(ph);
+      }
+
+      if (img.label) {
+        const badge = document.createElement('span');
+        badge.className = 'lb-slide-label-badge';
+        badge.textContent = img.label;
+        slide.appendChild(badge);
+      }
+      return slide;
+    });
+  }
+
+  function buildThumbs(card, slides) {
+    let images = [];
+    try { images = JSON.parse(card.dataset.images || '[]'); } catch(e) {}
+    const sigilEl = card.querySelector('.placeholder-sigil');
+    const sigilHTML = sigilEl ? sigilEl.innerHTML : '';
+
+    return (images.length ? images : [{ label: 'รูปภาพ' }]).map((img, i) => {
+      const th = document.createElement('div');
+      th.className = 'lb-thumb' + (i === 0 ? ' active' : '');
+      th.dataset.idx = i;
+
+      if (img.src) {
+        const im = document.createElement('img');
+        im.src = img.src; im.alt = img.label || '';
+        th.appendChild(im);
+      } else {
+        const ph = document.createElement('div');
+        ph.className = 'lb-thumb-sigil';
+        ph.innerHTML = sigilHTML;
+        th.appendChild(ph);
+      }
+
+      if (img.label) {
+        const badge = document.createElement('span');
+        badge.className = 'lb-thumb-badge';
+        badge.textContent = img.label;
+        th.appendChild(badge);
+      }
+
+      th.addEventListener('click', () => goToImg(i));
+      return th;
+    });
+  }
+
+  function renderCard(card) {
+    // Clear main wrap (keep buttons + counter)
+    lbMainWrap.querySelectorAll('.lb-main-slide').forEach(s => s.remove());
+    lbThumbs.innerHTML = '';
+
+    const slides = buildSlides(card);
+    const thumbs = buildThumbs(card, slides);
+
+    slides.forEach(s => lbMainWrap.appendChild(s));
+    thumbs.forEach(t => lbThumbs.appendChild(t));
+
+    // Only show thumbnails strip when >1 image
+    lbThumbs.style.display = slides.length > 1 ? 'flex' : 'none';
+
+    imgIdx = 0;
+    updateImgUI(slides.length);
+
+    // Meta
+    document.getElementById('lbLabel').textContent = card.dataset.lbLabel || '';
+    document.getElementById('lbSize').textContent  = card.dataset.lbSize  || '';
+    document.getElementById('lbTitle').textContent = card.dataset.lbTitle || '';
+    const price = card.dataset.lbPrice || '';
+    document.getElementById('lbPrice').textContent = (price && price !== '-' && price !== 'TBD') ? price : '';
+    const statusEl = document.getElementById('lbStatus');
+    statusEl.className = 'lb-status';
+    const st = card.dataset.lbStatus || '';
+    if (st === 'sold')      { statusEl.textContent = '✕ ขายแล้ว'; statusEl.classList.add('sold'); }
+    else if (st === 'available') { statusEl.textContent = '● พร้อมขาย'; statusEl.classList.add('available'); }
+    else statusEl.textContent = '';
+  }
+
+  function updateImgUI(total) {
+    const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+    slides.forEach((s, i) => s.classList.toggle('active', i === imgIdx));
+
+    const thumbEls = lbThumbs.querySelectorAll('.lb-thumb');
+    thumbEls.forEach((t, i) => t.classList.toggle('active', i === imgIdx));
+    // Scroll thumb into view
+    if (thumbEls[imgIdx]) thumbEls[imgIdx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+    lbImgCtr.textContent = total > 1 ? `${String(imgIdx+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}` : '';
+    lbImgPrev.classList.toggle('hidden', total <= 1 || imgIdx === 0);
+    lbImgNext.classList.toggle('hidden', total <= 1 || imgIdx === total - 1);
+  }
+
+  function goToImg(i) {
+    const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+    imgIdx = Math.max(0, Math.min(i, slides.length - 1));
+    updateImgUI(slides.length);
+  }
+
+  function buildCardDots(cards) {
+    lbCardDots.innerHTML = '';
+    if (cards.length <= 1) return;
+    cards.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'lb-card-dot' + (i === cardIdx ? ' active' : '');
+      lbCardDots.appendChild(d);
+    });
+  }
+
+  function openLb(cards, idx) {
+    allCards = cards; cardIdx = idx;
+    renderCard(allCards[cardIdx]);
+    buildCardDots(allCards);
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function goCard(dir) {
+    cardIdx = (cardIdx + dir + allCards.length) % allCards.length;
+    renderCard(allCards[cardIdx]);
+    // update dots
+    lbCardDots.querySelectorAll('.lb-card-dot').forEach((d, i) => d.classList.toggle('active', i === cardIdx));
+  }
+
+  /* --- Event bindings --- */
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbBd').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', () => goCard(-1));
+  document.getElementById('lbNext').addEventListener('click', () => goCard(1));
+  lbImgPrev.addEventListener('click', () => goToImg(imgIdx - 1));
+  lbImgNext.addEventListener('click', () => goToImg(imgIdx + 1));
+
+  /* Swipe support on main image */
+  let touchStartX = 0;
+  lbMainWrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  lbMainWrap.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) {
+      const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+      goToImg(imgIdx + (dx < 0 ? 1 : -1));
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') {
+      const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+      if (slides.length > 1 && imgIdx > 0) goToImg(imgIdx - 1);
+      else goCard(-1);
+    }
+    if (e.key === 'ArrowRight') {
+      const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+      if (slides.length > 1 && imgIdx < slides.length - 1) goToImg(imgIdx + 1);
+      else goCard(1);
+    }
+  });
+
+  /* --- Attach click to all cards --- */
+  document.querySelectorAll('[data-lb-title]').forEach(card => {
+    card.addEventListener('click', () => {
+      const cards = getVisibleCards();
+      const idx = cards.indexOf(card);
+      openLb(cards, idx >= 0 ? idx : 0);
+    });
+  });
+</script>
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ClothingStore",
+      "name": "Black Gothic",
+      "url": "https://blackgothic.com",
+      "description": "รับเพ้นเสื้อ Custom ลาย Cybersigilism ผสมผสาน Gothic สไตล์ขาว-ดำ ออกแบบเฉพาะตัว ไม่มีลายซ้ำ ส่งทั่วประเทศ",
+      "sameAs": [
+        "https://www.instagram.com/black1gothic",
+        "https://www.tiktok.com/@black1gothic"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "ผลงานเพ้นเสื้อ Custom — Black Gothic Gallery",
+      "description": "คอลเลกชันผลงานเพ้นเสื้อ Custom ลาย Cybersigilism และ Gothic จาก Black Gothic",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Occult Drop No.001 — เพ้นเสื้อ Custom Cybersigilism",
+          "description": "เพ้นเสื้อ Custom ลาย Cybersigilism สไตล์ Gothic ขาวดำ"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sigil Series No.001 — ผลงานเพ้นเสื้อ Gothic",
+          "description": "ผลงานเพ้นเสื้อ Sigil Series ลายเส้น Gothic"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Limited Edition No.001 — เพ้นเสื้อ Gothic Streetwear",
+          "description": "เพ้นเสื้อ Custom Limited Edition ลาย Gothic Streetwear เฉพาะตัว"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Occult Geometry No.002 — Cybersigilism Dark Art",
+          "description": "เพ้นเสื้อ Custom ลาย Cybersigilism Occult Geometry สไตล์ Dark Art"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Fragment No.001 — Gothic Streetwear",
+          "description": "เสื้อสตรีท Gothic Streetwear เพ้นลาย Custom ลายเส้นขาวดำ"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Void Pattern No.001 — เพ้นเสื้อ Gothic",
+          "description": "เพ้นเสื้อ Custom ลาย Gothic Void Pattern ลายเส้นขาวดำ"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     MOBILE BOTTOM NAV HTML
+     วางก่อน </body> — แสดงเฉพาะมือถือผ่าน CSS
+============================================================ -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav">
+
+  <!-- Home -->
+  <a href="index.html" class="mob-nav-item" id="mbn-home">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    </div>
+    <span>Home</span>
+  </a>
+
+  <!-- Style -->
+  <a href="style.html" class="mob-nav-item" id="mbn-style">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    </div>
+    <span>Style</span>
+  </a>
+
+  <!-- Gallery (active บนหน้านี้) -->
+  <a href="gallery.html" class="mob-nav-item active" id="mbn-gallery">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <span>Gallery</span>
+  </a>
+
+  <!-- Order -->
+  <a href="order.html" class="mob-nav-item" id="mbn-order">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    </div>
+    <span>Order</span>
+  </a>
+
+  <!-- Contact -->
+  <a href="index.html#contact" class="mob-nav-item" id="mbn-contact">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </div>
+    <span>Contact</span>
+  </a>
+
+</nav>
+
+</body>
+</html>

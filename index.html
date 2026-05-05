@@ -1,0 +1,2836 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080808">
+<title>Black Gothic | รับเพ้นเสื้อ Custom สไตล์ Cybersigilism Gothic | ทั่วประเทศ</title>
+<!-- SEO Meta Tags -->
+<meta name="description" content="Black Gothic รับเพ้นเสื้อ Custom ลาย Cybersigilism ผสมผสาน Gothic สไตล์ขาว-ดำ ส่งทั่วประเทศ ออกแบบเฉพาะตัว ไม่มีลายซ้ำ">
+<meta name="keywords" content="รับเพ้นเสื้อ, custom paint เสื้อ, เสื้อ gothic, cybersigilism, เสื้อลายเส้น, streetwear ไทย, เพ้นเสื้อ custom, เสื้อสตรีท, gothic streetwear, เสื้อ handmade">
+<meta name="robots" content="index, follow">
+<!-- Open Graph Tags -->
+<meta property="og:title" content="BLACK GOTHIC — Custom Painted Apparel">
+<meta property="og:description" content="รับเพ้นเสื้อ Custom สไตล์ Cybersigilism + Gothic เฉพาะตัว ทั่วประเทศ">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/og-preview.jpg">
+<meta property="og:url" content="https://blackgothic.com">
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BLACK GOTHIC — Custom Painted Apparel">
+<meta name="twitter:description" content="รับเพ้นเสื้อ Custom สไตล์ Cybersigilism + Gothic เฉพาะตัว">
+<!-- Canonical -->
+<link rel="canonical" href="https://blackgothic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    color-scheme: dark;
+    --black: #080808;
+    --white: #f0ede6;
+    --gray-dark: #1a1a1a;
+    --gray-mid: #2e2e2e;
+    --gray-line: #333;
+    --accent: #c8c0a8;
+    --accent-glow: #e8e0cc;
+    --red-dark: #8b1a1a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #080808 !important;
+  }
+
+  body {
+    background: var(--black) !important;
+    background-color: #080808 !important;
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    cursor: crosshair;
+  }
+
+  /* === NOISE OVERLAY === */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+  }
+
+  /* === CURSOR === */
+  .cursor-dot {
+    position: fixed;
+    width: 6px; height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transition: transform 0.1s;
+    transform: translate(-50%, -50%);
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 32px; height: 32px;
+    border: 1px solid rgba(200,192,168,0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, width 0.2s, height 0.2s, border-color 0.2s;
+    transform: translate(-50%, -50%);
+  }
+
+  /* === NAV === */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(8,8,8,0.85);
+    backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+    line-height: 1;
+  }
+  .nav-logo:hover { opacity: 0.75; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    color: rgba(240,237,230,0.55);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  /* === HERO === */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 3rem;
+  }
+
+  .hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,192,168,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,192,168,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-sigil {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55vw;
+    max-width: 700px;
+    opacity: 0.07;
+    animation: sigil-breathe 8s ease-in-out infinite;
+  }
+  @keyframes sigil-breathe {
+    0%, 100% { opacity: 0.07; transform: translateY(-50%) scale(1) rotate(0deg); }
+    50% { opacity: 0.12; transform: translateY(-50%) scale(1.02) rotate(1deg); }
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 720px; }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fade-up 1s 0.3s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Metal Mania', cursive;
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 0.2em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fade-up 1s 0.5s forwards;
+    text-shadow: 0 0 40px rgba(200,192,168,0.12);
+  }
+  .hero-title .gothic { color: var(--accent); display: inline; }
+  .gothic-num { color: rgba(200,192,168,0.6); font-size: 0.85em; }
+
+  .hero-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: rgba(240,237,230,0.35);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fade-up 1s 0.7s forwards;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(240,237,230,0.65);
+    max-width: 480px;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fade-up 1s 0.9s forwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0;
+    animation: fade-up 1s 1.1s forwards;
+  }
+  .btn-primary {
+    padding: 0.9rem 2.5rem;
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: translateX(-101%);
+    transition: transform 0.3s ease;
+  }
+  .btn-primary:hover::after { transform: translateX(0); }
+  .btn-primary:hover { color: var(--black); }
+  .btn-primary span { position: relative; z-index: 1; }
+
+  .btn-secondary {
+    padding: 0.9rem 2.5rem;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(240,237,230,0.25);
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fade-up 1s 1.5s forwards;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 0.4; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+  .scroll-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: rgba(240,237,230,0.3);
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* === SECTION BASE === */
+  section { padding: 8rem 3rem; position: relative; }
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+    margin-bottom: 3rem;
+  }
+
+  /* === ABOUT / BRAND === */
+  #about {
+    border-top: 1px solid var(--gray-line);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .sigil-frame {
+    width: 100%;
+    aspect-ratio: 1;
+    border: 1px solid var(--gray-line);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .sigil-frame::before, .sigil-frame::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(200,192,168,0.2);
+  }
+  .sigil-frame::before { inset: 12px; }
+  .sigil-frame::after { inset: 24px; transform: rotate(45deg); }
+
+  .corner-deco {
+    position: absolute;
+    width: 20px; height: 20px;
+    border-color: var(--accent);
+    border-style: solid;
+  }
+  .corner-deco.tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+  .corner-deco.tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+  .corner-deco.bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+  .corner-deco.br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+  .sigil-main {
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    opacity: 0.6;
+    animation: sigil-breathe 6s ease-in-out infinite;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: rgba(240,237,230,0.65);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  .tag {
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--gray-line);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .tag:hover { border-color: var(--accent); background: rgba(200,192,168,0.06); }
+
+  /* === SERVICES === */
+  #services { border-top: 1px solid var(--gray-line); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background: var(--gray-dark);
+    padding: 3.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s;
+    cursor: default;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: #1f1f1f; }
+
+  .service-num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(200,192,168,0.08);
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .service-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .service-desc {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: rgba(240,237,230,0.55);
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .service-steps {
+    list-style: none;
+    counter-reset: step-counter;
+  }
+  .service-steps li {
+    counter-increment: step-counter;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: rgba(240,237,230,0.4);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .service-steps li::before {
+    content: counter(step-counter, decimal-leading-zero);
+    color: var(--accent);
+    font-size: 0.6rem;
+  }
+  .service-steps li:last-child { border-bottom: none; }
+
+  /* === PROCESS === */
+  #process {
+    border-top: 1px solid var(--gray-line);
+    background: var(--gray-dark);
+  }
+  .process-track {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+  .process-track::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(to right, var(--accent), rgba(200,192,168,0.2), var(--accent), rgba(200,192,168,0.2));
+  }
+  .process-step {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+  .process-num {
+    width: 64px; height: 64px;
+    border: 1px solid var(--gray-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--gray-dark);
+    position: relative;
+    z-index: 1;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .process-step:hover .process-num {
+    background: var(--gray-mid);
+    border-color: var(--accent);
+  }
+  .process-step-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .process-step-desc {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: rgba(240,237,230,0.4);
+    font-weight: 300;
+  }
+
+  /* === GALLERY === */
+  #gallery { border-top: 1px solid var(--gray-line); }
+
+  .gallery-intro { max-width: 600px; margin-bottom: 4rem; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    max-width: 1200px;
+  }
+  .gallery-item {
+    background: var(--gray-dark);
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  .gallery-item.large {
+    aspect-ratio: 3/4;
+    grid-column: unset;
+  }
+  .gallery-item-inner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s ease;
+  }
+  .gallery-item-inner img,
+  .gallery-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+  }
+  .gallery-sigil {
+    position: relative;
+    z-index: 1;
+  }
+
+  .gallery-item:hover .gallery-item-inner { transform: scale(1.05); }
+
+  /* === LIGHTBOX (Multi-image) === */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .lightbox.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(4,4,4,0.93);
+    backdrop-filter: blur(8px);
+  }
+  .lightbox-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    user-select: none;
+  }
+
+  /* Main image frame */
+  .lb-main-wrap {
+    width: min(520px, 80vw);
+    aspect-ratio: 3/4;
+    border: 1px solid var(--gray-line);
+    overflow: hidden;
+    position: relative;
+    background: var(--gray-dark);
+    transition: border-color 0.3s;
+  }
+  .lb-main-slide {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .lb-main-slide.active { opacity: 1; pointer-events: all; }
+  .lb-main-slide img {
+    width: 100%; height: 100%; object-fit: cover; display: block; z-index: 0;
+  }
+  .lb-main-slide .lb-slide-sigil {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lb-main-slide .lb-slide-sigil svg { width: 55%; opacity: 0.25; }
+  .lb-slide-label-badge {
+    position: absolute; bottom: 0.75rem; left: 0.75rem; z-index: 2;
+    font-family: 'Space Mono', monospace; font-size: 0.5rem;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    background: rgba(8,8,8,0.75); border: 1px solid rgba(200,192,168,0.25);
+    color: var(--accent);
+  }
+
+  /* Image nav inside frame */
+  .lb-img-prev, .lb-img-next {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 5;
+    width: 36px; height: 36px;
+    border: 1px solid rgba(200,192,168,0.25); background: rgba(8,8,8,0.6);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-size: 1rem; transition: border-color 0.2s, background 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .lb-img-prev { left: 0.6rem; }
+  .lb-img-next { right: 0.6rem; }
+  .lb-img-prev:hover, .lb-img-next:hover { border-color: var(--accent); background: rgba(200,192,168,0.12); }
+  .lb-img-prev.hidden, .lb-img-next.hidden { display: none; }
+
+  .lb-img-counter {
+    position: absolute; top: 0.65rem; right: 0.75rem; z-index: 5;
+    font-family: 'Space Mono', monospace; font-size: 0.5rem;
+    letter-spacing: 0.18em; color: rgba(240,237,230,0.45);
+    background: rgba(8,8,8,0.6); padding: 0.2rem 0.5rem;
+    border: 1px solid rgba(200,192,168,0.12);
+  }
+
+  /* Thumbnail strip */
+  .lb-thumbs {
+    display: flex; gap: 4px; margin-top: 8px;
+    width: min(520px, 80vw); overflow-x: auto; scrollbar-width: none;
+  }
+  .lb-thumbs::-webkit-scrollbar { display: none; }
+  .lb-thumb {
+    flex-shrink: 0; width: 64px; height: 82px;
+    border: 1px solid rgba(200,192,168,0.15); background: #111;
+    overflow: hidden; cursor: pointer; position: relative;
+    transition: border-color 0.2s;
+  }
+  .lb-thumb.active { border-color: var(--accent); }
+  .lb-thumb:hover { border-color: rgba(200,192,168,0.5); }
+  .lb-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .lb-thumb .lb-thumb-sigil {
+    position: absolute; inset: 0; background: #0d0d0d;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lb-thumb .lb-thumb-sigil svg { width: 60%; opacity: 0.18; }
+  .lb-thumb-badge {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    font-family: 'Space Mono', monospace; font-size: 0.38rem;
+    letter-spacing: 0.1em; text-transform: uppercase; text-align: center;
+    padding: 0.18rem 0; background: rgba(8,8,8,0.8); color: rgba(200,192,168,0.55);
+  }
+
+  /* Info row */
+  .lightbox-info {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.3rem; margin-top: 1rem;
+  }
+  .lightbox-label {
+    font-family: 'Space Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.35em; color: var(--accent); text-transform: uppercase;
+  }
+  .lightbox-title {
+    font-family: 'Rajdhani', sans-serif; font-size: 1.1rem;
+    font-weight: 600; color: var(--white); letter-spacing: 0.08em;
+  }
+  .lightbox-counter {
+    font-family: 'Space Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 0.3em; color: rgba(240,237,230,0.25);
+    text-transform: uppercase; margin-top: 0.15rem;
+  }
+
+  /* Close + card nav (outside frame) */
+  .lightbox-close {
+    position: fixed; top: 1.5rem; right: 1.75rem;
+    width: 40px; height: 40px;
+    border: 1px solid rgba(240,237,230,0.2); background: none;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    z-index: 3; transition: border-color 0.3s, background 0.3s;
+    color: var(--white); font-size: 1.1rem;
+  }
+  .lightbox-close:hover { border-color: var(--accent); background: rgba(200,192,168,0.08); }
+  .lightbox-nav {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    width: 44px; height: 44px;
+    border: 1px solid rgba(240,237,230,0.12); background: rgba(8,8,8,0.6);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    z-index: 3; transition: border-color 0.3s; color: rgba(240,237,230,0.4);
+    font-size: 1rem; backdrop-filter: blur(4px);
+  }
+  .lightbox-nav:hover { border-color: rgba(200,192,168,0.4); color: var(--white); }
+  .lightbox-prev { left: 1.5rem; }
+  .lightbox-next { right: 1.5rem; }
+
+  /* Card indicator dots */
+  .lb-card-dots {
+    position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 3;
+  }
+  .lb-card-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: rgba(200,192,168,0.2); transition: background 0.2s;
+  }
+  .lb-card-dot.active { 
+    background: var(--accent); 
+  }
+  .lb-card-index {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    min-width: 38px;
+    text-align: center;
+}
+  .lightbox-zoom-reset {
+    background: none;
+    border: 1px solid rgba(200,192,168,0.15);
+    color: rgba(240,237,230,0.35);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.52rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0.25rem 0.6rem;
+  }
+
+  /* === ZOOM CONTROLS === */
+  .lb-zoom-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 6px;
+    width: min(520px, 80vw);
+    justify-content: flex-end;
+  }
+  .lb-zoom-btn {
+    width: 28px; height: 28px;
+    border: 1px solid rgba(200,192,168,0.2);
+    background: rgba(8,8,8,0.7);
+    color: var(--accent);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace;
+    transition: border-color 0.2s, background 0.2s;
+    flex-shrink: 0;
+  }
+  .lb-zoom-btn:hover { border-color: var(--accent); background: rgba(200,192,168,0.1); }
+  .lb-zoom-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    color: rgba(240,237,230,0.3);
+    min-width: 38px;
+    text-align: center;
+    user-select: none;
+  }
+  .lb-zoom-hint {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.45rem;
+    letter-spacing: 0.1em;
+    color: rgba(240,237,230,0.18);
+    margin-right: auto;
+    user-select: none;
+  }
+
+  /* Zoomed image container */
+  .lb-main-slide {
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  .lb-main-slide.zoomed { cursor: grab; }
+  .lb-main-slide.dragging { cursor: grabbing; }
+  .lb-zoom-layer {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    transform-origin: center center;
+    transition: transform 0.2s ease;
+    will-change: transform;
+  }
+  .lb-zoom-layer.no-transition { transition: none; }
+  .gallery-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    z-index: 0;
+  }
+
+  .gallery-sigil {
+    width: 55%;
+    opacity: 0.25;
+    animation: sigil-breathe 5s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+  .gallery-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .gallery-item-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .gallery-coming-soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: rgba(200,192,168,0.3);
+    text-transform: uppercase;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  /* === GALLERY MORE CTA === */
+  .btn-gallery-more {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid rgba(200,192,168,0.35);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.4s;
+    background: transparent;
+  }
+  .btn-gallery-more::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: translateX(-101%);
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+  .btn-gallery-more:hover::before { transform: translateX(0); }
+  .btn-gallery-more:hover { border-color: var(--accent); }
+  .btn-gallery-more:hover .btn-gallery-more-inner { color: var(--black); }
+  .btn-gallery-more:hover .btn-gallery-arrow { transform: translateX(6px); }
+  .btn-gallery-more-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: color 0.4s;
+  }
+  .btn-gallery-arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  /* === WHY US === */
+  #why {
+    border-top: 1px solid var(--gray-line);
+    background: var(--gray-dark);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  .why-features { list-style: none; }
+  .why-features li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .why-features li:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+  .why-icon {
+    width: 2px;
+    min-width: 2px;
+    height: 1.5rem;
+    background: var(--accent);
+    margin-top: 0.2rem;
+  }
+  .why-feat-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  .why-feat-desc {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: rgba(240,237,230,0.45);
+    font-weight: 300;
+  }
+
+  .why-quote {
+    position: sticky;
+    top: 6rem;
+    padding: 3rem;
+    border: 1px solid var(--gray-line);
+    background: rgba(200,192,168,0.03);
+    position: relative;
+  }
+  .why-quote::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 2rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 5rem;
+    color: var(--accent);
+    line-height: 1;
+    opacity: 0.3;
+  }
+  .why-quote blockquote {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--white);
+    font-style: italic;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .why-quote cite {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  /* === CONTACT / CTA === */
+  #contact {
+    border-top: 1px solid var(--gray-line);
+    text-align: center;
+    padding: 8rem 3rem 6rem;
+  }
+  .contact-inner { max-width: 700px; margin: 0 auto; }
+  .contact-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+  .contact-sub {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(240,237,230,0.5);
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+  .contact-channels {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+  .channel-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--gray-line);
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: border-color 0.3s, background 0.3s;
+    cursor: pointer;
+    background: none;
+  }
+  .channel-btn:hover {
+    border-color: var(--accent);
+    background: rgba(200,192,168,0.06);
+  }
+  .channel-icon { font-size: 1rem; }
+  .channel-label { color: rgba(240,237,230,0.5); font-size: 0.55rem; display: block; letter-spacing: 0.2em; }
+  .channel-name { color: var(--white); font-size: 0.72rem; display: block; }
+
+  /* === FOOTER === */
+  footer {
+    border-top: 1px solid var(--gray-line);
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1rem;
+    color: rgba(240,237,230,0.3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .footer-copy {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: rgba(240,237,230,0.2);
+    text-transform: uppercase;
+  }
+
+  /* === SCROLL REVEAL === */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* === PRICING === */
+  #pricing { border-top: 1px solid var(--gray-line); }
+
+  .pricing-intro {
+    max-width: 700px;
+    margin-bottom: 5rem;
+  }
+  .pricing-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(200,192,168,0.2);
+    background: rgba(200,192,168,0.04);
+    margin-top: 1.5rem;
+  }
+  .pricing-note-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.6); }
+  }
+  .pricing-note span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    color: rgba(240,237,230,0.4);
+    text-transform: uppercase;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin-bottom: 2px;
+  }
+  .pricing-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+  }
+
+  .price-card {
+    background: var(--gray-dark);
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    border-bottom: 2px solid transparent;
+  }
+  .price-card:hover { background: #202020; }
+  .price-card.featured {
+    background: #1e1e1e;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .price-size {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .price-size-plus {
+    color: var(--accent);
+    font-size: 1.8rem;
+  }
+
+  .price-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: rgba(240,237,230,0.35);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .price-divider {
+    width: 30px; height: 1px;
+    background: rgba(200,192,168,0.2);
+    margin-bottom: 1.5rem;
+  }
+
+  .price-desc {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: rgba(240,237,230,0.5);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+  }
+
+  .price-amount {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .price-tag-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .price-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid rgba(200,192,168,0.15);
+    color: rgba(240,237,230,0.3);
+    text-transform: uppercase;
+  }
+  .price-tag.highlight {
+    border-color: rgba(200,192,168,0.4);
+    color: var(--accent);
+  }
+
+  .pricing-plus-banner {
+    max-width: 1200px;
+    background: var(--gray-dark);
+    border: 1px solid rgba(200,192,168,0.15);
+    border-left: 3px solid var(--accent);
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .plus-banner-label {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .plus-banner-desc {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: rgba(240,237,230,0.5);
+    font-weight: 300;
+  }
+
+  .pricing-cta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+  }
+  /* === PROMOTION BANNER === */
+  .promo-banner {
+    background: linear-gradient(135deg, #1a0a0a 0%, #2a1010 50%, #1a0a0a 100%);
+    border: 1px solid var(--red-dark);
+    border-left: 4px solid #cc2222;
+    padding: 1.5rem 2.5rem;
+    margin: 0 0 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .promo-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(204,34,34,0.03) 10px,
+      rgba(204,34,34,0.03) 20px
+    );
+    pointer-events: none;
+  }
+  .promo-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .promo-badge {
+    flex-shrink: 0;
+    background: #cc2222;
+    color: #fff;
+    font-family: 'Metal Mania', cursive;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1.2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 0 20px rgba(204,34,34,0.4);
+    animation: promo-pulse 2.5s ease-in-out infinite;
+  }
+  @keyframes promo-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(204,34,34,0.4); }
+    50% { box-shadow: 0 0 35px rgba(204,34,34,0.7); }
+  }
+  .promo-text-wrap { flex: 1; min-width: 200px; }
+  .promo-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff4444;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+  .promo-desc {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: rgba(240,237,230,0.7);
+    line-height: 1.8;
+  }
+  .promo-slots {
+    flex-shrink: 0;
+    text-align: center;
+  }
+  .promo-slots-num {
+    font-family: 'Metal Mania', cursive;
+    font-size: 2.5rem;
+    color: #ff4444;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(255,68,68,0.5);
+  }
+  .promo-slots-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    color: rgba(240,237,230,0.35);
+    text-transform: uppercase;
+  }
+
+  /* === PROMO PRICE DISPLAY === */
+  .price-amount-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+  .price-amount-original {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    color: rgba(240,237,230,0.3);
+    text-decoration: line-through;
+    text-decoration-color: rgba(204,34,34,0.7);
+    text-decoration-thickness: 2px;
+    letter-spacing: 0.05em;
+  }
+  .price-amount-new {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ff6666;
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(255,68,68,0.3);
+  }
+  .price-promo-tag {
+    display: inline-block;
+    background: rgba(204,34,34,0.2);
+    border: 1px solid rgba(204,34,34,0.5);
+    color: #ff6666;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    padding: 0.15rem 0.5rem;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  .pricing-cta-note {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: rgba(240,237,230,0.2);
+    text-transform: uppercase;
+    line-height: 1.7;
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 900px) {
+    nav:not(.mobile-bottom-nav) { display: none !important; }
+    section { padding: 5rem 1.5rem; }
+    #hero { padding: 0 1.5rem; }
+    .about-grid, .why-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .services-grid { grid-template-columns: 1fr; gap: 2px; }
+    .process-track { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .process-track::before { display: none; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item.large { grid-column: span 2; }
+    .pricing-grid, .pricing-grid-bottom { grid-template-columns: 1fr; }
+    .pricing-plus-banner { flex-direction: column; gap: 1rem; }
+    .pricing-cta { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+    .hero-sigil { display: none; }
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+    .mobile-bottom-nav { display: flex !important; }
+  }
+
+  @media (min-width: 901px) {
+    .mobile-bottom-nav { display: none !important; }
+  }
+
+  /* =====================================================
+     MOBILE BOTTOM NAVIGATION BAR
+  ===================================================== */
+  .mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 9000;
+    height: 64px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: rgba(8,8,8,0.96);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(200,192,168,0.12);
+    align-items: stretch;
+    justify-content: space-around;
+  }
+
+  .mob-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    text-decoration: none;
+    color: rgba(240,237,230,0.32);
+    transition: color 0.22s ease;
+    position: relative;
+    padding: 6px 2px 10px;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .mob-nav-item:active { opacity: 0.7; }
+
+  .mob-nav-item.active {
+    color: var(--accent);
+  }
+
+
+  .mob-nav-icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .mob-nav-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Centre "+" button */
+  .mob-nav-item.mob-nav-center .mob-nav-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(200,192,168,0.25);
+    margin-top: -6px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .mob-nav-item.mob-nav-center .mob-nav-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--black);
+    stroke-width: 2;
+  }
+  .mob-nav-item.mob-nav-center:active .mob-nav-icon {
+    transform: scale(0.93);
+    box-shadow: 0 0 10px rgba(200,192,168,0.15);
+  }
+  .mob-nav-item.mob-nav-center::before { display: none; }
+
+  .mob-nav-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1;
+    margin-top: 1px;
+  }
+  .mob-nav-item.mob-nav-center .mob-nav-label {
+    margin-top: 4px;
+  }
+  /* .navbar {  ลอยเฉยๆลบได้
+    position: relative;
+    padding: 15px 20px;
+    background: rgba(255,255,255, 0.05);
+    border-radius: 60px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px  35px rgba(0,0,0,0.5);
+    border: 0.5px solid #1c1c1c;
+  } */
+</style>
+<!-- Code injected by Five-server -->
+  <!-- Code injected by Five-server -->
+  </head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===================== MOBILE BOTTOM NAV ===================== -->
+<nav class="mobile-bottom-nav" id="mobileNav" role="navigation" aria-label="เมนูหลัก">
+
+  <!-- Home -->
+  <a href="#hero" class="mob-nav-item active" id="mbn-home" onclick="mobNavGo(event,'hero','mbn-home')">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V10.5z"/><path d="M9 21V13h6v8"/></svg>
+    </div>
+    <span class="mob-nav-label">Home</span>
+  </a>
+
+  <!-- Style -->
+  <a href="style.html" class="mob-nav-item" id="mbn-style">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    </div>
+    <span class="mob-nav-label">Style</span>
+  </a>
+
+  <!-- Gallery -->
+  <a href="#gallery" class="mob-nav-item" id="mbn-gallery" onclick="mobNavGo(event,'gallery','mbn-gallery')">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <span class="mob-nav-label">Gallery</span>
+  </a>
+
+  <!-- Order -->
+  <a href="order.html" class="mob-nav-item" id="mbn-order">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    </div>
+    <span class="mob-nav-label">Order</span>
+  </a>
+
+  <!-- Contact -->
+  <a href="#contact" class="mob-nav-item" id="mbn-contact" onclick="mobNavGo(event,'contact','mbn-contact')">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </div>
+    <span class="mob-nav-label">Contact</span>
+  </a>
+
+</nav>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero" onclick="scrollToSection('hero'); return false;">BLACK<span>1</span>GOTHIC</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="style.html">Style</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="warranty.html">Warranty</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+
+  <!-- Big decorative sigil SVG background -->
+  <svg class="hero-sigil" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="250" cy="250" r="240" stroke="white" stroke-width="0.5" fill="none"/>
+    <circle cx="250" cy="250" r="180" stroke="white" stroke-width="0.5" fill="none"/>
+    <circle cx="250" cy="250" r="120" stroke="white" stroke-width="0.5" fill="none"/>
+    <polygon points="250,10 480,375 20,375" stroke="white" stroke-width="0.5" fill="none"/>
+    <polygon points="250,490 20,125 480,125" stroke="white" stroke-width="0.5" fill="none"/>
+    <line x1="250" y1="10" x2="250" y2="490" stroke="white" stroke-width="0.3"/>
+    <line x1="10" y1="250" x2="490" y2="250" stroke="white" stroke-width="0.3"/>
+    <line x1="10" y1="10" x2="490" y2="490" stroke="white" stroke-width="0.3"/>
+    <line x1="490" y1="10" x2="10" y2="490" stroke="white" stroke-width="0.3"/>
+    <circle cx="250" cy="250" r="8" fill="white" opacity="0.4"/>
+    <circle cx="250" cy="10" r="4" fill="white" opacity="0.3"/>
+    <circle cx="250" cy="490" r="4" fill="white" opacity="0.3"/>
+    <circle cx="10" cy="250" r="4" fill="white" opacity="0.3"/>
+    <circle cx="490" cy="250" r="4" fill="white" opacity="0.3"/>
+    <path d="M250,70 Q340,150 430,250 Q340,350 250,430 Q160,350 70,250 Q160,150 250,70Z" stroke="white" stroke-width="0.4" fill="none"/>
+    <rect x="180" y="180" width="140" height="140" transform="rotate(45 250 250)" stroke="white" stroke-width="0.4" fill="none"/>
+  </svg>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Cybersigilism × Gothic Art</p>
+    <h1 class="hero-title" aria-label="Black Gothic รับเพ้นเสื้อ Cybersigilism Gothic Custom">
+      BLACK<span class="gothic-num">1</span>GOTHIC
+    </h1>
+    <p class="hero-subtitle">Custom Painted Apparel — Handcrafted Identity</p>
+    <p class="hero-desc">
+      เราไม่แค่เพ้นเสื้อ — เราสร้างตัวตนของคุณ
+      ผ่านลายเส้น Cybersigilism ผสม Gothic
+      ทุกชิ้นคือ Art ที่คุณสวมใส่ได้
+    </p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="scrollToSection('contact')"><span>สั่งเพ้นเสื้อ</span></button>
+      <button class="btn-secondary" onclick="scrollToSection('gallery')">ดูผลงาน</button>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="sigil-frame">
+        <div class="corner-deco tl"></div>
+        <div class="corner-deco tr"></div>
+        <div class="corner-deco bl"></div>
+        <div class="corner-deco br"></div>
+        <svg class="sigil-main" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="190" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <circle cx="200" cy="200" r="140" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <circle cx="200" cy="200" r="80" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <polygon points="200,10 385,305 15,305" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <polygon points="200,390 15,95 385,95" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <line x1="200" y1="10" x2="200" y2="390" stroke="#c8c0a8" stroke-width="0.5"/>
+          <line x1="10" y1="200" x2="390" y2="200" stroke="#c8c0a8" stroke-width="0.5"/>
+          <circle cx="200" cy="200" r="12" fill="#c8c0a8" opacity="0.5"/>
+          <path d="M200,60 L340,280 L60,280 Z" stroke="#c8c0a8" stroke-width="0.5" fill="rgba(200,192,168,0.03)"/>
+          <path d="M200,340 L60,120 L340,120 Z" stroke="#c8c0a8" stroke-width="0.5" fill="rgba(200,192,168,0.03)"/>
+          <rect x="130" y="130" width="140" height="140" transform="rotate(45 200 200)" stroke="#c8c0a8" stroke-width="0.5" fill="none"/>
+        </svg>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">ศิลปะที่มี<br>ชีวิตของคุณ</h2>
+      <div class="divider"></div>
+      <p>
+        Black Gothic คือสตูดิโอรับเพ้นเสื้อสไตล์ <strong>Cybersigilism</strong> ผสม <strong>Gothic</strong>
+        โดยเฉพาะ — ลายเส้นสัญลักษณ์ที่ผสมผสานระหว่างความลึกลับโบราณและความ Dark ของสตรีทแวร์ยุคใหม่
+      </p>
+      <p>
+        เราเชื่อว่าเสื้อผ้าคือภาษาอีกแบบหนึ่ง ลูกค้าทุกคนสามารถ Custom ลายได้เองตั้งแต่ต้น
+        ทำให้ทุกชิ้นงานคือเอกลักษณ์ที่ไม่ซ้ำใครในโลก
+      </p>
+      <p>
+        ไม่ว่าคุณจะเบื่อเสื้อตัวเดิมและอยากเปลี่ยนลุค หรืออยากได้เสื้อสไตล์ใหม่ตั้งแต่ต้น
+        เราพร้อมช่วยคุณสร้างความผูกพันกับเสื้อตัวนั้นในแบบที่คุณไม่เคยรู้สึกมาก่อน
+      </p>
+      <div class="about-tags">
+        <span class="tag">Cybersigilism</span>
+        <span class="tag">Gothic Art</span>
+        <span class="tag">Hand Painted</span>
+        <span class="tag">100% Custom</span>
+        <span class="tag">Streetwear</span>
+        <span class="tag">Dark Aesthetic</span>
+      </div>
+      <div style="text-align:center; margin-top:4rem;">
+        <a href="style.html" class="btn-primary reveal" style="display:inline-block;">
+       <span> Style Guide →</span>
+     </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div style="max-width:1200px; margin:0 auto 4rem;">
+    <p class="section-label reveal">What We Do</p>
+    <h2 class="section-title reveal">2 บริการ<br>หนึ่งเดียวในสไตล์</h2>
+    <div class="divider reveal"></div>
+  </div>
+
+  <div class="services-grid">
+    <!-- Service 1 -->
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="40" height="40" stroke="#c8c0a8" stroke-width="1"/>
+        <path d="M14 24 Q24 10 34 24 Q24 38 14 24Z" stroke="#c8c0a8" stroke-width="1" fill="none"/>
+        <circle cx="24" cy="24" r="4" fill="#c8c0a8" opacity="0.5"/>
+        <line x1="24" y1="4" x2="24" y2="44" stroke="#c8c0a8" stroke-width="0.5" opacity="0.4"/>
+        <line x1="4" y1="24" x2="44" y2="24" stroke="#c8c0a8" stroke-width="0.5" opacity="0.4"/>
+      </svg>
+      <h3 class="service-title">Custom Paint<br>บริการเพ้นเสื้อคัสตอม</h3>
+      <p class="service-desc">
+        นำเสื้อตัวเก่าหรือตัวโปรดของคุณมา แล้วบอกไอเดียให้เรา
+        ทีมงานจะออกแบบลายเส้น Cybersigilism-Gothic เฉพาะสำหรับคุณโดยเฉพาะ
+        พร้อมให้คุณแก้ไขจนพอใจก่อนลงมือเพ้นจริง
+      </p>
+      <ul class="service-steps">
+        <li>ส่งเสื้อ + บอกไอเดียของคุณมาที่ร้าน</li>
+        <li>ทีมออกแบบลายและส่งไฟล์ดิจิทัลให้ดู</li>
+        <li>ยืนยัน หรือ ขอแก้ไขลายได้ตามใจ</li>
+        <li>เพ้นงานจริงและส่งคืนให้</li>
+      </ul>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card reveal">
+      <span class="service-num">02</span>
+      <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 4L44 14V34L24 44L4 34V14Z" stroke="#c8c0a8" stroke-width="1" fill="none"/>
+        <path d="M24 4L24 44" stroke="#c8c0a8" stroke-width="0.5" opacity="0.4"/>
+        <path d="M4 14L44 34" stroke="#c8c0a8" stroke-width="0.5" opacity="0.4"/>
+        <path d="M44 14L4 34" stroke="#c8c0a8" stroke-width="0.5" opacity="0.4"/>
+        <circle cx="24" cy="24" r="6" stroke="#c8c0a8" stroke-width="1" fill="rgba(200,192,168,0.1)"/>
+      </svg>
+      <h3 class="service-title">Ready to Wear<br>เสื้อเพ้นพร้อมขาย</h3>
+      <p class="service-desc">
+        คอลเลกชันเสื้อที่ทางร้านออกแบบและเพ้นเองทุกชิ้น
+        Limited Edition ทุกตัว ไม่มีลายซ้ำ
+        สำหรับคนที่อยากได้สไตล์ Black Gothic ไปใส่ได้เลยโดยไม่ต้องรอนาน
+      </p>
+      <ul class="service-steps">
+        <li>ดูผลงานใน IG และ TikTok ของร้าน</li>
+        <li>เลือกชิ้นที่ถูกใจและทัก DM</li>
+        <li>ตกลงราคาและแจ้งขนาดเสื้อ</li>
+        <li>ชำระและรับเสื้อทางไปรษณีย์</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div style="max-width:1100px; margin:0 auto 5rem; text-align:center;">
+    <p class="section-label reveal">How It Works</p>
+    <h2 class="section-title reveal" style="text-align:center;">ขั้นตอนง่ายๆ<br>4 สเต็ป</h2>
+    <div class="divider reveal" style="margin:1.5rem auto 0;"></div>
+  </div>
+  <div class="process-track">
+    <div class="process-step reveal">
+      <div class="process-num">I</div>
+      <p class="process-step-title">ติดต่อ & ไอเดีย</p>
+      <p class="process-step-desc">ทัก DM มาใน IG หรือ TikTok บอกสิ่งที่คุณอยากได้ หรือถามปรึกษาได้เลย</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="process-num">II</div>
+      <p class="process-step-title">ออกแบบไฟล์</p>
+      <p class="process-step-desc">ทีมออกแบบลาย Cybersigilism-Gothic ตามไอเดียแล้วส่งไฟล์ดิจิทัลให้ดูก่อน</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="process-num">III</div>
+      <p class="process-step-title">อนุมัติ & เพ้น</p>
+      <p class="process-step-desc">ยืนยันหรือแก้ไขลาย จากนั้นทีมเพ้นงานจริงด้วยความประณีต</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="process-num">IV</div>
+      <p class="process-step-title">รับงาน</p>
+      <p class="process-step-desc">รับเสื้อกลับผ่านทางไปรษณีย์หรือนัดรับตามแต่ตกลง</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:4rem;">
+    <a href="order.html" class="btn-primary reveal" style="display:inline-block;">
+      <span>⬡ สั่งออเดอร์เลย</span>
+    </a>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-intro reveal">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">เรทราคา<br>การรับเพ้น</h2>
+    <div class="divider"></div>
+    <p style="font-size:0.95rem; line-height:1.85; color:rgba(240,237,230,0.5); font-weight:300; max-width:580px;">
+      ราคาวัดจาก <strong style="color:var(--accent);">ขนาดของลาย</strong> และ <strong style="color:var(--accent);">ความละเอียด</strong>
+      ของงานเป็นหลัก ทุกไซส์มีตัวเลือก <strong style="color:var(--accent);">+ (Plus)</strong>
+      สำหรับลายที่มีความซับซ้อนสูงหรือไม่มีแพทเทินซ้ำ
+    </p>
+    <div class="pricing-note">
+      <div class="pricing-note-dot"></div>
+      <span>ราคาเริ่มต้น — Standard / Complex (+) ตามความละเอียดของงาน</span>
+    </div>
+  </div>
+
+  <!-- PROMOTION BANNER -->
+  <div class="promo-banner reveal">
+    <div class="promo-banner-inner">
+      <div class="promo-badge">⚡ PROMO</div>
+      <div class="promo-text-wrap">
+        <div class="promo-title">โปรโมชั่นพิเศษ Early Bird — 10 ออเดอร์แรก</div>
+        <div class="promo-desc">สำหรับ 10 คนแรกที่มาสั่งทำเสื้อกับทางร้าน — ราคาพิเศษไม่มีวันกลับมาอีก<br>เมื่อครบ 10 ออเดอร์ ราคาจะกลับสู่ราคาปกติทันที</div>
+      </div>
+      <div class="promo-slots">
+        <div class="promo-slots-num">10</div>
+        <div class="promo-slots-label">slots only</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 1: S, S+, M -->
+  <div class="pricing-grid">
+    <div class="price-card reveal">
+      <div class="price-size">S</div>
+      <div class="price-name">Small — ลายเล็ก</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายเล็กๆ กระจายตามเสื้อ 2–3 จุด เช่น ลายที่แขน คอ หรือหน้าอก เหมาะสำหรับผู้เริ่มต้นที่อยากลองเพ้น</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">150 ฿</div>
+        <div class="price-amount-new">90 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag">2–3 จุด</span>
+        <span class="price-tag">เสื้อ T-Shirt</span>
+        <span class="price-tag">เริ่มต้น</span>
+      </div>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-size">S<span class="price-size-plus">+</span></div>
+      <div class="price-name">Small Plus — ลายเล็กละเอียด</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายเล็ก แต่มีความละเอียดสูง หรือเป็นลายที่ไม่มีแพทเทินซ้ำ ต้องใช้ทักษะและเวลามากกว่า S ปกติ</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">200 ฿</div>
+        <div class="price-amount-new">120 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag highlight">ความละเอียดสูง</span>
+        <span class="price-tag highlight">ไม่มีแพทเทิน</span>
+        <span class="price-tag">Free-Hand</span>
+      </div>
+    </div>
+
+    <div class="price-card featured reveal">
+      <div class="price-size">M</div>
+      <div class="price-name">Medium — ลายขนาดกลาง</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายขนาดกลาง ตามแขนเสื้อยาวมาจนถึงอก 1 ข้าง ให้ความโดดเด่นของลุคได้ดี</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">180 ฿</div>
+        <div class="price-amount-new">110 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag">แขน → อก 1 ข้าง</span>
+        <span class="price-tag">Long Sleeve</span>
+        <span class="price-tag highlight">แนะนำ</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: M+, L, L+ -->
+  <div class="pricing-grid">
+    <div class="price-card reveal">
+      <div class="price-size">M<span class="price-size-plus">+</span></div>
+      <div class="price-name">Medium Plus — กลางละเอียด</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายขนาดกลางที่มีความซับซ้อนสูง หรือลายที่ไม่มีแพทเทินซ้ำ ใช้เวลาออกแบบและเพ้นมากกว่า M ทั่วไป</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">230 ฿</div>
+        <div class="price-amount-new">140 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag highlight">ความละเอียดสูง</span>
+        <span class="price-tag">แขน → อก</span>
+        <span class="price-tag">Unique Pattern</span>
+      </div>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-size">L</div>
+      <div class="price-name">Large — ลายขนาดใหญ่</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายขนาดใหญ่ที่ด้านใดด้านหนึ่ง — หน้าหรือหลังเสื้อ สร้าง Statement ที่เห็นได้ชัดและโดดเด่น</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">260 ฿</div>
+        <div class="price-amount-new">155 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag">หน้า หรือ หลัง</span>
+        <span class="price-tag">Full Panel</span>
+        <span class="price-tag highlight">Statement Piece</span>
+      </div>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-size">L<span class="price-size-plus">+</span></div>
+      <div class="price-name">Large Plus — ใหญ่ละเอียด</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายขนาดใหญ่ที่มีรายละเอียดสูงมาก หรือเป็น Free-Hand ที่ไม่ซ้ำแพทเทิน งานระดับ Artpiece</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">320 ฿</div>
+        <div class="price-amount-new">190 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag highlight">Artpiece Level</span>
+        <span class="price-tag highlight">Free-Hand</span>
+        <span class="price-tag">หน้า หรือ หลัง</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: XL, XXL -->
+  <div class="pricing-grid-bottom">
+    <div class="price-card reveal" style="border-bottom:2px solid rgba(200,192,168,0.15);">
+      <div class="price-size">XL</div>
+      <div class="price-name">Extra Large — ทั้งหน้าและหลัง</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายขนาดใหญ่ทั้งหน้าและหลังเสื้อ ความสม่ำเสมอของลายทั้งสองด้านต้องใช้ความแม่นยำสูง</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">360 ฿</div>
+        <div class="price-amount-new">215 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag highlight">หน้า + หลัง</span>
+        <span class="price-tag">Full Coverage</span>
+      </div>
+    </div>
+
+    <div class="price-card reveal" style="border-bottom:2px solid rgba(200,192,168,0.15);">
+      <div class="price-size">XL<span class="price-size-plus">+</span></div>
+      <div class="price-name">XL Plus — ทั้งหน้า หลัง ละเอียด</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายขนาดใหญ่ทั้งหน้าและหลัง ที่มีความละเอียดสูงหรือเป็น Free-Hand ทั้งสองด้าน</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">500 ฿</div>
+        <div class="price-amount-new">300 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag highlight">หน้า + หลัง</span>
+        <span class="price-tag highlight">ความละเอียดสูง</span>
+      </div>
+    </div>
+
+    <div class="price-card reveal" style="background:#1e1e1e; border-bottom:2px solid var(--accent);">
+      <div class="price-size" style="font-size:2rem;">XXL</div>
+      <div class="price-name">Double XL — Full Body</div>
+      <div class="price-divider"></div>
+      <p class="price-desc">ลายขนาดใหญ่ครอบคลุมทั้งหน้า หลัง และแขน — งาน Full Body ระดับสูงสุด สำหรับ Collector Piece แท้จริง</p>
+      <div class="price-amount-wrap">
+        <div class="price-amount-original">580 ฿</div>
+        <div class="price-amount-new">350 ฿</div>
+
+      </div>
+      <div class="price-tag-grid">
+        <span class="price-tag highlight">หน้า + หลัง + แขน</span>
+        <span class="price-tag highlight">Full Body</span>
+        <span class="price-tag">Max Level</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- + Rule Banner -->
+  <div class="pricing-plus-banner reveal">
+    <div class="plus-banner-label">[ + ] PLUS</div>
+    <p class="plus-banner-desc">
+      ทุกไซส์มีตัวเลือก <strong style="color:var(--accent);">Plus (+)</strong> ซึ่งหมายถึงลายที่มี <strong style="color:var(--white);">ความละเอียดสูงกว่าปกติ</strong>
+      หรือลายที่ <strong style="color:var(--white);">ไม่มีแพทเทินซ้ำ</strong> (Free-Hand / Non-Repeat) ที่ต้องใช้ทักษะและเวลามากกว่าในการเพ้น
+      ราคาจะสูงกว่าไซส์เดียวกันที่ไม่มี + ตามความซับซ้อนของงาน
+    </p>
+  </div>
+
+  <div class="pricing-cta reveal">
+    <a href="#contact" class="btn-primary"><span>สอบถามราคา</span></a>
+    <p class="pricing-cta-note">
+      ราคาจะถูกกำหนดหลังจากดูดีไซน์แล้ว<br>
+      ติดต่อมาเพื่อขอ Quote ได้เลย ไม่มีค่าใช้จ่ายในการสอบถาม
+    </p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-intro reveal">
+    <p class="section-label">Portfolio</p>
+    <h2 class="section-title">ผลงานของเรา</h2>
+    <div class="divider"></div>
+    <p style="font-size:0.9rem; color:rgba(240,237,230,0.45); line-height:1.8; font-weight:300;">
+      ผลงานและ Collection ของ Black Gothic — ลายเส้นที่ผสมผสาน Cybersigilism กับ Gothic Art
+      ทุกชิ้นคือ Unique Piece ที่ไม่มีซ้ำในโลก
+    </p>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item" data-label="Cybersigilism" data-title="Custom Piece No.001" data-images='[{"src":"img/1.jpg","label":"หน้าเสื้อ"},{"src":"img/2.jpg","label":"หลังเสื้อ"},{"src":"img/001.jpg","label":"Detail"},{"src":"img/002.jpg","label":"Sleeve"}]' style="background:#000;">
+      <div class="gallery-item-inner">
+        <img src="img/1.jpg" alt="Work 1" class="gallery-bg-img">
+        <svg class="gallery-sigil" style="--delay:0s;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="190" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <polygon points="200,10 385,305 15,305" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <polygon points="200,390 15,95 385,95" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <circle cx="200" cy="200" r="60" stroke="#c8c0a8" stroke-width="0.8" fill="rgba(200,192,168,0.05)"/>
+          <line x1="200" y1="10" x2="200" y2="390" stroke="#c8c0a8" stroke-width="0.4"/>
+          <line x1="10" y1="200" x2="390" y2="200" stroke="#c8c0a8" stroke-width="0.4"/>
+        </svg>
+        <!-- <span class="gallery-coming-soon">FEATURED WORK<br>Coming Soon</span> -->
+        <div class="gallery-overlay">
+          <span class="gallery-label">Cybersigilism</span>
+          <span class="gallery-item-title">Custom Piece No.001</span>
+        </div>
+      </div>
+    </div>
+   <div class="gallery-item" data-label="Cybersigilism" data-title="Custom Piece No.001" data-images='[{"src":"img/Black Gothic 001.jpg","label":"หน้าเสื้อ"},{"src":"img/Black Gothic 002.jpg","label":"หลังเสื้อ"},{"src":"img/Black Gothic 01.jpg","label":"Detail"},{"src":"img/Black Gothic 02.jpg","label":"Sleeve"}]' style="background:#000;">
+      <div class="gallery-item-inner">
+        <img src="img/Black Gothic 001.jpg" alt="Work 1" class="gallery-bg-img">
+        <svg class="gallery-sigil" style="--delay:1s;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="20" width="360" height="360" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <rect x="80" y="80" width="240" height="240" transform="rotate(45 200 200)" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <circle cx="200" cy="200" r="80" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <circle cx="200" cy="200" r="10" fill="#c8c0a8" opacity="0.4"/>
+        </svg>
+        <!-- <span class="gallery-coming-soon">Coming Soon</span> -->
+        <div class="gallery-overlay">
+          <span class="gallery-label">Gothic</span>
+          <span class="gallery-item-title">Sigil Series</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-label="Cybersigilism" data-title="Custom Piece No.001" data-images='[{"src":"img/Black Gothic 001.jpg","label":"หน้าเสื้อ"},{"src":"img/Black Gothic 002.jpg","label":"หลังเสื้อ"},{"src":"img/Black Gothic 01.jpg","label":"Detail"},{"src":"img/Black Gothic 02.jpg","label":"Sleeve"}]' style="background:#000;">
+      <div class="gallery-item-inner">
+        <img src="img/Black skeleton 001.jpg" alt="Work 1" class="gallery-bg-img">
+        <svg class="gallery-sigil" style="--delay:2s;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="180" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <path d="M200,20 L380,200 L200,380 L20,200 Z" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <path d="M200,80 L320,200 L200,320 L80,200 Z" stroke="#c8c0a8" stroke-width="0.5" fill="rgba(200,192,168,0.03)"/>
+          <circle cx="200" cy="200" r="20" fill="none" stroke="#c8c0a8" stroke-width="1"/>
+        </svg>
+        <!-- <span class="gallery-coming-soon">Coming Soon</span> -->
+        <div class="gallery-overlay">
+          <span class="gallery-label">Ready to Wear</span>
+          <span class="gallery-item-title">Drop 001</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-label="Cybersigilism" data-title="Custom Piece No.001" data-images='[{"src":"img/White Crying king 001.jpg","label":"หน้าเสื้อ"},{"src":"img/White Crying king 002.jpg","label":"หลังเสื้อ"},{"src":"img/White Crying king 01.jpg","label":"Detail"},{"src":"img/White Crying king 02.jpg","label":"Sleeve"}]' style="background:#000;">
+      <div class="gallery-item-inner">
+        <img src="img/White Crying king 001.jpg" alt="Work 1" class="gallery-bg-img">
+        <svg class="gallery-sigil" style="--delay:0.5s;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <line x1="200" y1="20" x2="200" y2="380" stroke="#c8c0a8" stroke-width="0.8"/>
+          <line x1="20" y1="200" x2="380" y2="200" stroke="#c8c0a8" stroke-width="0.8"/>
+          <line x1="56" y1="56" x2="344" y2="344" stroke="#c8c0a8" stroke-width="0.5"/>
+          <line x1="344" y1="56" x2="56" y2="344" stroke="#c8c0a8" stroke-width="0.5"/>
+          <circle cx="200" cy="200" r="160" stroke="#c8c0a8" stroke-width="0.5" fill="none"/>
+          <circle cx="200" cy="200" r="100" stroke="#c8c0a8" stroke-width="0.5" fill="none"/>
+          <circle cx="200" cy="200" r="40" stroke="#c8c0a8" stroke-width="0.8" fill="rgba(200,192,168,0.06)"/>
+        </svg>
+        <!-- <span class="gallery-coming-soon">Coming Soon</span> -->
+        <div class="gallery-overlay">
+          <span class="gallery-label">Custom</span>
+          <span class="gallery-item-title">Personal Commission</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-label="Cybersigilism" data-title="Custom Piece No.001" data-images='[{"src":"img/dom.jpg","label":"หน้าเสื้อ"},{"src":"img/dom2.jpg","label":"หลังเสื้อ"},{"src":"img/dom3.jpg","label":"Detail"},{"src":"img/dom4.jpg","label":"Sleeve"}]' style="background:#000;">
+      <div class="gallery-item-inner">
+        <!-- <img src="img/dom.jpg" alt="Work 1" class="gallery-bg-img"> -->
+        <svg class="gallery-sigil" style="--delay:1.5s;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="200,20 380,160 310,380 90,380 20,160" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <polygon points="200,80 320,180 270,340 130,340 80,180" stroke="#c8c0a8" stroke-width="0.5" fill="rgba(200,192,168,0.03)"/>
+          <circle cx="200" cy="220" r="50" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <circle cx="200" cy="220" r="8" fill="#c8c0a8" opacity="0.4"/>
+        </svg>
+        <!-- <span class="gallery-coming-soon">Coming Soon</span> -->
+        <div class="gallery-overlay">
+          <span class="gallery-label">Exclusive</span>
+          <span class="gallery-item-title">Limited Edition</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-label="Cybersigilism" data-title="Custom Piece No.001" data-images='[{"src":"img/dom.jpg","label":"หน้าเสื้อ"},{"src":"img/dom2.jpg","label":"หลังเสื้อ"},{"src":"img/dom3.jpg","label":"Detail"},{"src":"img/dom4.jpg","label":"Sleeve"}]' style="background:#000;">
+       <div class="gallery-item-inner">
+        <!-- <img src="img/dom.jpg" alt="Work 1" class="gallery-bg-img"> -->
+        <svg class="gallery-sigil" style="--delay:0.8s;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="170" stroke="#c8c0a8" stroke-width="0.5" fill="none"/>
+          <circle cx="200" cy="200" r="120" stroke="#c8c0a8" stroke-width="0.4" fill="none"/>
+          <path d="M200,30 L370,310 L30,310 Z" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <path d="M200,370 L30,90 L370,90 Z" stroke="#c8c0a8" stroke-width="0.8" fill="none"/>
+          <circle cx="200" cy="200" r="35" stroke="#c8c0a8" stroke-width="1" fill="rgba(200,192,168,0.04)"/>
+          <line x1="200" y1="165" x2="200" y2="30" stroke="#c8c0a8" stroke-width="0.4"/>
+          <line x1="200" y1="235" x2="200" y2="370" stroke="#c8c0a8" stroke-width="0.4"/>
+          <line x1="165" y1="200" x2="30" y2="200" stroke="#c8c0a8" stroke-width="0.4"/>
+          <line x1="235" y1="200" x2="370" y2="200" stroke="#c8c0a8" stroke-width="0.4"/>
+          <circle cx="200" cy="200" r="6" fill="#c8c0a8" opacity="0.5"/>
+        </svg>
+        <!-- <span class="gallery-coming-soon">Coming Soon</span> -->
+        <div class="gallery-overlay">
+          <span class="gallery-label">Dark Art</span>
+          <span class="gallery-item-title">Occult Geometry No.002</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Button to Full Gallery Page -->
+  <div class="gallery-more-cta reveal" style="display:flex; justify-content:center; gap:1.25rem; margin-top:3.5rem; flex-wrap:wrap;">
+    <a href="gallery.html" class="btn-gallery-more">
+      <span class="btn-gallery-more-inner">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <rect x="1" y="1" width="6" height="6" stroke="currentColor" stroke-width="1"/>
+          <rect x="9" y="1" width="6" height="6" stroke="currentColor" stroke-width="1"/>
+          <rect x="1" y="9" width="6" height="6" stroke="currentColor" stroke-width="1"/>
+          <rect x="9" y="9" width="6" height="6" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <span>ดูผลงานเพิ่มเติม</span>
+        <span class="btn-gallery-arrow">→</span>
+      </span>
+    </a>
+    <a href="care.html" class="btn-gallery-more">
+      <span class="btn-gallery-more-inner">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <path d="M8 13.5C8 13.5 1.5 9.5 1.5 5.5C1.5 3.567 3.067 2 5 2C6.204 2 7.267 2.59 8 3.5C8.733 2.59 9.796 2 11 2C12.933 2 14.5 3.567 14.5 5.5C14.5 9.5 8 13.5 8 13.5Z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+        </svg>
+        <span>Care</span>
+        <span class="btn-gallery-arrow">→</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="why-grid">
+    <div>
+      <p class="section-label reveal">Why Black Gothic</p>
+      <h2 class="section-title reveal">ทำไมต้อง<br>เลือกเรา</h2>
+      <div class="divider reveal"></div>
+      <ul class="why-features">
+        <li class="reveal">
+          <div class="why-icon"></div>
+          <div>
+            <p class="why-feat-title">100% Custom — ลายเฉพาะของคุณ</p>
+            <p class="why-feat-desc">ทุกลายออกแบบมาเพื่อคุณโดยเฉพาะ ไม่มี Template ไม่มีลายซ้ำ สร้างความผูกพันกับเสื้อที่คุณสวมใส่</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="why-icon"></div>
+          <div>
+            <p class="why-feat-title">Review ก่อนเพ้นจริงเสมอ</p>
+            <p class="why-feat-desc">ส่งไฟล์ดีไซน์ดิจิทัลให้ดูและแก้ไขก่อน ไม่มีเซอร์ไพรส์ไม่พอใจ ลูกค้าต้องโอเคก่อนทุกครั้ง</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="why-icon"></div>
+          <div>
+            <p class="why-feat-title">Niche Aesthetic ที่หาที่ไหนไม่ได้</p>
+            <p class="why-feat-desc">Cybersigilism ผสม Gothic คือความเชี่ยวชาญเฉพาะทางของเรา — ลายเส้นที่มีทั้งความลึกลับและความเป็นสตรีท</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="why-icon"></div>
+          <div>
+            <p class="why-feat-title">Upcycle เสื้อเก่าให้มีชีวิตใหม่</p>
+            <p class="why-feat-desc">เปลี่ยนเสื้อตัวเดิมที่เบื่อแล้วให้กลายเป็น Streetwear ที่โดดเด่น ไม่ต้องซื้อใหม่ แค่เพ้นก็เปลี่ยนลุคได้</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <div class="why-icon"></div>
+          <div>
+            <p class="why-feat-title">ออนไลน์ 100% ทั่วประเทศ</p>
+            <p class="why-feat-desc">ติดต่อ สั่งงาน ดูดีไซน์ และรับสินค้าได้จากทั่วไทย ผ่าน IG และ TikTok ของร้านได้เลย</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <div class="why-quote">
+        <blockquote>
+          เราไม่ได้แค่เพ้นลายลงบนผ้า
+          เราสร้างเอกลักษณ์ที่คุณสวมใส่ได้
+          — ทุกชิ้นงานคือตัวตนของเจ้าของ
+        </blockquote>
+        <cite>Black Gothic Studio — Custom Cybersigilism Art</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <p class="section-label reveal" style="justify-content:center; display:flex;">Get In Touch</p>
+    <h2 class="contact-title reveal">พร้อมสร้าง<br>ตัวตนของคุณ?</h2>
+    <p class="contact-sub reveal">
+      ติดต่อเราผ่านช่องทางออนไลน์ได้เลย
+      ไม่ว่าจะอยากสั่งเพ้น มีคำถาม หรืออยากดูผลงานเพิ่มเติม
+      ทีมงานพร้อมตอบทุกวัน
+    </p>
+    <div class="contact-channels reveal">
+      <a href="https://www.instagram.com/black1gothic?igsh=NnVkcGticWptNnI4" target="_blank" class="channel-btn">
+        <span class="channel-icon">📷</span>
+        <div>
+          <span class="channel-label">Follow & DM</span>
+          <span class="channel-name">Instagram</span>
+        </div>
+      </a>
+      
+    </div>
+    <p style="font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.25em; color:rgba(240,237,230,0.2); text-transform:uppercase;">
+      * Online Only — ทั่วประเทศไทย
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">BLACK<span style="opacity:0.5;">1</span>GOTHIC</span>
+  <span class="footer-copy">© 2026 Black Gothic — All Rights Reserved</span>
+</footer>
+
+<!-- LIGHTBOX (Multi-image) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous card">‹</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next card">›</button>
+  <div class="lb-card-dots" id="lbCardDots"></div>
+
+  <div class="lightbox-content">
+    <!-- Main image area -->
+    <div class="lb-main-wrap" id="lbMainWrap">
+      <!-- slides injected by JS -->
+      <button class="lb-img-prev hidden" id="lbImgPrev">‹</button>
+      <button class="lb-img-next hidden" id="lbImgNext">›</button>
+      <span class="lb-img-counter" id="lbImgCounter"></span>
+    </div>
+    <!-- Thumbnails -->
+    <div class="lb-thumbs" id="lbThumbs"></div>
+    <!-- Zoom Controls -->
+    <div class="lb-zoom-bar" id="lbZoomBar">
+      <span class="lb-zoom-hint">scroll / pinch / dbl-click</span>
+      <button class="lb-zoom-btn" id="lbZoomOut" title="ซูมออก">−</button>
+      <span class="lb-zoom-label" id="lbZoomLabel">100%</span>
+      <button class="lb-zoom-btn" id="lbZoomIn" title="ซูมเข้า">+</button>
+      <button class="lb-zoom-btn" id="lbZoomReset" title="รีเซ็ต" style="font-size:0.6rem;letter-spacing:0.1em;width:auto;padding:0 0.5rem;">⌂</button>
+    </div>
+    <!-- Info -->
+    <div class="lightbox-info">
+      <span class="lightbox-label" id="lightboxLabel"></span>
+      <span class="lightbox-title" id="lightboxTitle"></span>
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
+
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button, .service-card, .gallery-item').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      ring.style.width = '52px';
+      ring.style.height = '52px';
+      ring.style.borderColor = 'rgba(200,192,168,0.8)';
+    });
+    el.addEventListener('mouseleave', () => {
+      ring.style.width = '32px';
+      ring.style.height = '32px';
+      ring.style.borderColor = 'rgba(200,192,168,0.5)';
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.12 });
+  // rootMargin: '0px 0px -50px 0px'
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  function scrollToSection(id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    const navHeight = document.querySelector('nav').offsetHeight;
+    const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').replace('#', '');
+      scrollToSection(id);
+    });
+  });
+
+  document.querySelectorAll('a.btn-primary[href^="#"], a.btn-secondary[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').replace('#', '');
+      scrollToSection(id);
+    });
+  });
+
+  /* ========== MULTI-IMAGE LIGHTBOX ========== */
+  const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+  const lightbox     = document.getElementById('lightbox');
+  const lbMainWrap   = document.getElementById('lbMainWrap');
+  const lbThumbs     = document.getElementById('lbThumbs');
+  const lbImgPrev    = document.getElementById('lbImgPrev');
+  const lbImgNext    = document.getElementById('lbImgNext');
+  const lbImgCtr     = document.getElementById('lbImgCounter');
+  const lbCardDots   = document.getElementById('lbCardDots');
+
+  let cardIdx = 0, imgIdx = 0;
+
+  function buildSlides(item) {
+    let images = [];
+    try { images = JSON.parse(item.dataset.images || '[]'); } catch(e) {}
+    if (!images.length) images = [{ label: 'รูปภาพ' }];
+
+    const sigilEl = item.querySelector('.gallery-sigil, .gallery-bg-img');
+    const innerEl = item.querySelector('.gallery-item-inner');
+
+    return images.map((img, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'lb-main-slide' + (i === 0 ? ' active' : '');
+
+      if (img.src) {
+        const im = document.createElement('img');
+        im.src = img.src; im.alt = img.label || '';
+        slide.appendChild(im);
+      } else {
+        // Clone the gallery item inner (without overlay/coming-soon text)
+        const ph = document.createElement('div');
+        ph.className = 'lb-slide-sigil';
+        if (innerEl) {
+          const clone = innerEl.cloneNode(true);
+          clone.querySelectorAll('.gallery-coming-soon, .gallery-overlay').forEach(el => el.remove());
+          // Scale up sigil
+          const sig = clone.querySelector('.gallery-sigil');
+          if (sig) { sig.style.width = '68%'; sig.style.opacity = '0.4'; }
+          ph.appendChild(clone);
+        }
+        slide.appendChild(ph);
+      }
+
+      if (img.label) {
+        const badge = document.createElement('span');
+        badge.className = 'lb-slide-label-badge';
+        badge.textContent = img.label;
+        slide.appendChild(badge);
+      }
+      return slide;
+    });
+  }
+
+  function buildThumbs(item, totalSlides) {
+    let images = [];
+    try { images = JSON.parse(item.dataset.images || '[]'); } catch(e) {}
+    if (!images.length) images = [{ label: 'รูปภาพ' }];
+
+    const innerEl = item.querySelector('.gallery-item-inner');
+
+    return images.map((img, i) => {
+      const th = document.createElement('div');
+      th.className = 'lb-thumb' + (i === 0 ? ' active' : '');
+      th.dataset.idx = i;
+
+      if (img.src) {
+        const im = document.createElement('img');
+        im.src = img.src; im.alt = img.label || '';
+        th.appendChild(im);
+      } else {
+        const ph = document.createElement('div');
+        ph.className = 'lb-thumb-sigil';
+        if (innerEl) {
+          const clone = innerEl.cloneNode(true);
+          clone.querySelectorAll('.gallery-coming-soon, .gallery-overlay').forEach(el => el.remove());
+          ph.appendChild(clone);
+        }
+        th.appendChild(ph);
+      }
+
+      if (img.label) {
+        const badge = document.createElement('span');
+        badge.className = 'lb-thumb-badge';
+        badge.textContent = img.label;
+        th.appendChild(badge);
+      }
+
+      th.addEventListener('click', () => goToImg(i));
+      return th;
+    });
+  }
+
+  function renderCard(item) {
+    // Clear slides
+    lbMainWrap.querySelectorAll('.lb-main-slide').forEach(s => s.remove());
+    lbThumbs.innerHTML = '';
+
+    const slides = buildSlides(item);
+    const thumbs = buildThumbs(item, slides.length);
+
+    slides.forEach(s => lbMainWrap.appendChild(s));
+    thumbs.forEach(t => lbThumbs.appendChild(t));
+    lbThumbs.style.display = slides.length > 1 ? 'flex' : 'none';
+
+    imgIdx = 0;
+    updateImgUI(slides.length);
+
+    document.getElementById('lightboxLabel').textContent = item.dataset.label || '';
+    document.getElementById('lightboxTitle').textContent = item.dataset.title || '';
+    document.getElementById('lightboxCounter').textContent =
+      `[ ${String(cardIdx + 1).padStart(2,'0')} / ${String(galleryItems.length).padStart(2,'0')} ]`;
+  }
+
+  function updateImgUI(total) {
+    lbMainWrap.querySelectorAll('.lb-main-slide').forEach((s, i) => s.classList.toggle('active', i === imgIdx));
+    const thumbEls = lbThumbs.querySelectorAll('.lb-thumb');
+    thumbEls.forEach((t, i) => t.classList.toggle('active', i === imgIdx));
+    if (thumbEls[imgIdx]) thumbEls[imgIdx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+    lbImgCtr.textContent = total > 1 ? `${String(imgIdx+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}` : '';
+    lbImgPrev.classList.toggle('hidden', total <= 1 || imgIdx === 0);
+    lbImgNext.classList.toggle('hidden', total <= 1 || imgIdx === total - 1);
+  }
+
+  function goToImg(i) {
+    const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+    imgIdx = Math.max(0, Math.min(i, slides.length - 1));
+    updateImgUI(slides.length);
+  }
+
+  function buildCardDots() {
+    lbCardDots.innerHTML = '';
+    if (galleryItems.length <= 1) return;
+    galleryItems.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'lb-card-dot' + (i === cardIdx ? ' active' : '');
+      lbCardDots.appendChild(d);
+    });
+  }
+
+  function openLightbox(index) {
+    cardIdx = index;
+    renderCard(galleryItems[cardIdx]);
+    buildCardDots();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function goCard(dir) {
+    cardIdx = (cardIdx + dir + galleryItems.length) % galleryItems.length;
+    renderCard(galleryItems[cardIdx]);
+    lbCardDots.querySelectorAll('.lb-card-dot').forEach((d, i) => d.classList.toggle('active', i === cardIdx));
+  }
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxBackdrop').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', () => goCard(-1));
+  document.getElementById('lightboxNext').addEventListener('click', () => goCard(1));
+  lbImgPrev.addEventListener('click', () => goToImg(imgIdx - 1));
+  lbImgNext.addEventListener('click', () => goToImg(imgIdx + 1));
+
+  // Swipe support on main image
+  let touchStartX = 0;
+  lbMainWrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  lbMainWrap.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) goToImg(imgIdx + (dx < 0 ? 1 : -1));
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') {
+      const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+      if (slides.length > 1 && imgIdx > 0) goToImg(imgIdx - 1);
+      else goCard(-1);
+    }
+    if (e.key === 'ArrowRight') {
+      const slides = lbMainWrap.querySelectorAll('.lb-main-slide');
+      if (slides.length > 1 && imgIdx < slides.length - 1) goToImg(imgIdx + 1);
+      else goCard(1);
+    }
+  });
+
+  galleryItems.forEach((item, i) => {
+    item.addEventListener('click', () => openLightbox(i));
+  });
+
+  /* ===================== ZOOM SYSTEM ===================== */
+  const lbZoomIn    = document.getElementById('lbZoomIn');
+  const lbZoomOut   = document.getElementById('lbZoomOut');
+  const lbZoomReset = document.getElementById('lbZoomReset');
+  const lbZoomLabel = document.getElementById('lbZoomLabel');
+
+  const ZOOM_MIN = 1, ZOOM_MAX = 5, ZOOM_STEP = 0.4;
+  let zScale = 1, zTx = 0, zTy = 0;
+  let isDragging = false, dragStartX = 0, dragStartY = 0, dragTx = 0, dragTy = 0;
+
+  function getActiveSlide() {
+    return lbMainWrap.querySelector('.lb-main-slide.active');
+  }
+
+  function getOrCreateZoomLayer(slide) {
+    if (!slide) return null;
+    let layer = slide.querySelector('.lb-zoom-layer');
+    if (!layer) {
+      // Wrap all children into a zoom layer
+      layer = document.createElement('div');
+      layer.className = 'lb-zoom-layer';
+      while (slide.firstChild) layer.appendChild(slide.firstChild);
+      slide.appendChild(layer);
+    }
+    return layer;
+  }
+
+  function applyZoom(animate = true) {
+    const slide = getActiveSlide();
+    if (!slide) return;
+    const layer = getOrCreateZoomLayer(slide);
+    if (!layer) return;
+
+    // Clamp translation so image doesn't go too far out
+    const rect = lbMainWrap.getBoundingClientRect();
+    const maxTx = (rect.width  * (zScale - 1)) / 2;
+    const maxTy = (rect.height * (zScale - 1)) / 2;
+    zTx = Math.max(-maxTx, Math.min(maxTx, zTx));
+    zTy = Math.max(-maxTy, Math.min(maxTy, zTy));
+
+    if (!animate) layer.classList.add('no-transition');
+    else layer.classList.remove('no-transition');
+
+    layer.style.transform = `translate(${zTx}px, ${zTy}px) scale(${zScale})`;
+    lbZoomLabel.textContent = Math.round(zScale * 100) + '%';
+
+    slide.classList.toggle('zoomed', zScale > 1);
+    slide.classList.remove('dragging');
+  }
+
+  function resetZoom(animate = true) {
+    zScale = 1; zTx = 0; zTy = 0;
+    applyZoom(animate);
+  }
+
+  // Reset zoom whenever card/image changes
+  function zoomResetState() {
+    zScale = 1; zTx = 0; zTy = 0;
+    lbZoomLabel.textContent = '100%';
+    lbMainWrap.querySelectorAll('.lb-zoom-layer').forEach(l => {
+      l.classList.add('no-transition');
+      l.style.transform = 'translate(0,0) scale(1)';
+    });
+    lbMainWrap.querySelectorAll('.lb-main-slide').forEach(s => s.classList.remove('zoomed', 'dragging'));
+  }
+
+  // Hook into card navigation
+  const _lbCardPrev = document.getElementById('lightboxPrev');
+  const _lbCardNext = document.getElementById('lightboxNext');
+  _lbCardPrev.addEventListener('click', zoomResetState, true);
+  _lbCardNext.addEventListener('click', zoomResetState, true);
+  lbImgPrev.addEventListener('click', zoomResetState, true);
+  lbImgNext.addEventListener('click', zoomResetState, true);
+
+  // Zoom buttons
+  lbZoomIn.addEventListener('click', () => {
+    zScale = Math.min(ZOOM_MAX, parseFloat((zScale + ZOOM_STEP).toFixed(2)));
+    applyZoom();
+  });
+  lbZoomOut.addEventListener('click', () => {
+    zScale = Math.max(ZOOM_MIN, parseFloat((zScale - ZOOM_STEP).toFixed(2)));
+    if (zScale === 1) { zTx = 0; zTy = 0; }
+    applyZoom();
+  });
+  lbZoomReset.addEventListener('click', () => resetZoom());
+
+  // Double-click to zoom / reset
+  lbMainWrap.addEventListener('dblclick', e => {
+    if (zScale > 1) {
+      resetZoom();
+    } else {
+      const rect = lbMainWrap.getBoundingClientRect();
+      const cx = e.clientX - rect.left - rect.width  / 2;
+      const cy = e.clientY - rect.top  - rect.height / 2;
+      zScale = 2.5;
+      zTx = -cx * (zScale - 1) / zScale;
+      zTy = -cy * (zScale - 1) / zScale;
+      applyZoom();
+    }
+  });
+
+  // Mouse wheel zoom
+  lbMainWrap.addEventListener('wheel', e => {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? ZOOM_STEP * 0.6 : -ZOOM_STEP * 0.6;
+    const newScale = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, zScale + delta));
+    if (newScale === zScale) return;
+
+    // Zoom toward cursor
+    const rect = lbMainWrap.getBoundingClientRect();
+    const cx = e.clientX - rect.left - rect.width  / 2;
+    const cy = e.clientY - rect.top  - rect.height / 2;
+    const scaleDiff = newScale / zScale;
+    zTx = cx + (zTx - cx) * scaleDiff;
+    zTy = cy + (zTy - cy) * scaleDiff;
+    zScale = parseFloat(newScale.toFixed(3));
+    if (zScale <= 1) { zScale = 1; zTx = 0; zTy = 0; }
+    applyZoom(false);
+  }, { passive: false });
+
+  // Mouse drag
+  lbMainWrap.addEventListener('mousedown', e => {
+    if (zScale <= 1) return;
+    isDragging = true;
+    dragStartX = e.clientX;
+    dragStartY = e.clientY;
+    dragTx = zTx;
+    dragTy = zTy;
+    const slide = getActiveSlide();
+    if (slide) slide.classList.add('dragging');
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    zTx = dragTx + (e.clientX - dragStartX);
+    zTy = dragTy + (e.clientY - dragStartY);
+    applyZoom(false);
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    const slide = getActiveSlide();
+    if (slide) slide.classList.remove('dragging');
+  });
+
+  // Touch pinch-to-zoom
+  let lbTouches = [];
+  let pinchStartDist = 0, pinchStartScale = 1;
+  let pinchStartTx = 0, pinchStartTy = 0;
+  let pinchMidX = 0, pinchMidY = 0;
+
+  lbMainWrap.addEventListener('touchstart', e => {
+    if (e.touches.length === 2) {
+      lbTouches = Array.from(e.touches);
+      pinchStartDist = Math.hypot(
+        lbTouches[1].clientX - lbTouches[0].clientX,
+        lbTouches[1].clientY - lbTouches[0].clientY
+      );
+      pinchStartScale = zScale;
+      pinchStartTx = zTx;
+      pinchStartTy = zTy;
+      const rect = lbMainWrap.getBoundingClientRect();
+      pinchMidX = (lbTouches[0].clientX + lbTouches[1].clientX) / 2 - rect.left - rect.width  / 2;
+      pinchMidY = (lbTouches[0].clientY + lbTouches[1].clientY) / 2 - rect.top  - rect.height / 2;
+      e.preventDefault();
+    } else if (e.touches.length === 1 && zScale > 1) {
+      dragStartX = e.touches[0].clientX;
+      dragStartY = e.touches[0].clientY;
+      dragTx = zTx;
+      dragTy = zTy;
+      isDragging = true;
+    }
+  }, { passive: false });
+
+  lbMainWrap.addEventListener('touchmove', e => {
+    if (e.touches.length === 2 && pinchStartDist > 0) {
+      const dist = Math.hypot(
+        e.touches[1].clientX - e.touches[0].clientX,
+        e.touches[1].clientY - e.touches[0].clientY
+      );
+      const newScale = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, pinchStartScale * (dist / pinchStartDist)));
+      const scaleDiff = newScale / pinchStartScale;
+      zScale = parseFloat(newScale.toFixed(3));
+      zTx = pinchMidX + (pinchStartTx - pinchMidX) * scaleDiff;
+      zTy = pinchMidY + (pinchStartTy - pinchMidY) * scaleDiff;
+      if (zScale <= 1) { zScale = 1; zTx = 0; zTy = 0; }
+      applyZoom(false);
+      e.preventDefault();
+    } else if (e.touches.length === 1 && isDragging) {
+      zTx = dragTx + (e.touches[0].clientX - dragStartX);
+      zTy = dragTy + (e.touches[0].clientY - dragStartY);
+      applyZoom(false);
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  lbMainWrap.addEventListener('touchend', e => {
+    if (e.touches.length < 2) pinchStartDist = 0;
+    if (e.touches.length === 0) isDragging = false;
+  });
+
+  /* ===================== MOBILE NAV ===================== */
+  function mobNavGo(e, sectionId, btnId) {
+    e.preventDefault();
+    // deactivate all
+    document.querySelectorAll('.mob-nav-item').forEach(el => el.classList.remove('active'));
+    document.getElementById(btnId).classList.add('active');
+    scrollToSection(sectionId);
+  }
+
+  // Scroll spy — highlight correct mob nav item
+  const spySections = [
+    { id: 'hero',    btn: 'mbn-home' },
+    { id: 'about',   btn: 'mbn-home' },
+    { id: 'services',btn: 'mbn-home' },
+    { id: 'process', btn: 'mbn-home' },
+    { id: 'pricing', btn: 'mbn-home' },
+    { id: 'gallery', btn: 'mbn-gallery' },
+    { id: 'why',     btn: 'mbn-home' },
+    { id: 'contact', btn: 'mbn-contact' },
+  ];
+  // style & order links are external pages — no scroll spy needed
+
+  function updateMobNav() {
+    const mid = window.scrollY + window.innerHeight * 0.45;
+    let activeBtnId = 'mbn-home';
+    for (const { id, btn } of spySections) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      if (mid >= el.offsetTop) activeBtnId = btn;
+    }
+    document.querySelectorAll('.mob-nav-item').forEach(el => el.classList.remove('active'));
+    const activeEl = document.getElementById(activeBtnId);
+    if (activeEl) activeEl.classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateMobNav, { passive: true });
+  updateMobNav();
+</script>
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ClothingStore",
+      "name": "Black Gothic",
+      "url": "https://blackgothic.com",
+      "description": "รับเพ้นเสื้อ Custom ลาย Cybersigilism ผสมผสาน Gothic สไตล์ขาว-ดำ ออกแบบเฉพาะตัว ไม่มีลายซ้ำ ส่งทั่วประเทศ",
+      "sameAs": [
+        "https://www.instagram.com/black1gothic",
+        "https://www.tiktok.com/@black1gothic"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Black Gothic Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "รับเพ้นเสื้อ Custom",
+              "description": "บริการเพ้นเสื้อ Custom ลาย Cybersigilism และ Gothic สไตล์ขาว-ดำ ออกแบบตามความต้องการของลูกค้า",
+              "serviceType": "Custom Paint Service"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "เสื้อสำเร็จรูป Limited Edition",
+              "description": "เสื้อเพ้นพร้อมขาย Limited Edition ออกแบบโดย Black Gothic ทุกตัวไม่มีลายซ้ำ",
+              "category": "Gothic Streetwear"
+            }
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Thailand"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceType": "Online",
+        "availableLanguage": "Thai"
+      }
+    }
+  ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLACK GOTHIC — ขั้นตอนการสั่งซื้อ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #080808;
+    --white: #f0ede6;
+    --gray-dark: #1a1a1a;
+    --gray-mid: #2e2e2e;
+    --gray-line: #333;
+    --accent: #c8c0a8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 1.5rem 3rem;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(8,8,8,0.85); backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    font-family: 'Metal Mania', cursive; font-size: 1.25rem;
+    letter-spacing: 0.05em; color: var(--white); text-decoration: none;
+    text-transform: uppercase; transition: opacity 0.3s; line-height: 1;
+  }
+  .nav-logo:hover { opacity: 0.75; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Space Mono', monospace; font-size: 0.68rem;
+    letter-spacing: 0.18em; color: rgba(240,237,230,0.55);
+    text-decoration: none; text-transform: uppercase; transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+
+
+  /* HERO BANNER */
+  .page-hero {
+    min-height: 40vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 3rem 5rem;
+    margin-top: 72px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--gray-line);
+  }
+  .page-hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,192,168,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,192,168,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .page-hero-sigil {
+    position: absolute;
+    right: 3rem; top: 50%;
+    transform: translateY(-50%);
+    width: 320px; opacity: 0.05;
+  }
+  .page-hero-content { position: relative; z-index: 2; max-width: 800px; }
+  .page-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  .page-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .page-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(240,237,230,0.55);
+    line-height: 1.8;
+    max-width: 560px;
+  }
+
+  /* SUMMARY TAGS */
+  .summary-bar {
+    padding: 2rem 3rem;
+    border-bottom: 1px solid var(--gray-line);
+    background: var(--gray-dark);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .summary-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: rgba(240,237,230,0.3);
+    text-transform: uppercase;
+  }
+  .summary-value {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .summary-divider {
+    width: 1px; height: 40px;
+    background: var(--gray-line);
+  }
+
+  /* MAIN CONTENT */
+  .content-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6rem 3rem;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 36px; bottom: 36px;
+    left: 35px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent), rgba(200,192,168,0.08));
+  }
+
+  .step {
+    display: flex;
+    gap: 2.5rem;
+    padding-bottom: 4rem;
+    position: relative;
+  }
+  .step:last-child { padding-bottom: 0; }
+
+  .step-num {
+    width: 72px; height: 72px;
+    border: 1px solid var(--gray-line);
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    position: relative;
+    z-index: 1;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .step:hover .step-num {
+    border-color: var(--accent);
+    background: rgba(200,192,168,0.06);
+  }
+
+  .step-body { flex: 1; padding-top: 0.5rem; }
+
+  .step-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+
+  .step-desc {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(240,237,230,0.75);
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .step-list {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  .step-list li {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    color: rgba(240,237,230,0.55);
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    line-height: 1.6;
+  }
+  .step-list li::before {
+    content: '·';
+    color: var(--accent);
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+  .step-list li:last-child { border-bottom: none; }
+
+  .step-note {
+    padding: 1rem 1.4rem;
+    border-left: 3px solid rgba(200,192,168,0.4);
+    background: rgba(200,192,168,0.05);
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(240,237,230,0.65);
+    line-height: 1.75;
+    margin-top: 0.75rem;
+  }
+
+  /* SECTION DIVIDER */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 5rem 0 4rem;
+  }
+  .section-divider-line { flex: 1; height: 1px; background: var(--gray-line); }
+  .section-divider-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    margin-top: 6rem;
+    padding: 3rem;
+    border: 1px solid var(--gray-line);
+    background: var(--gray-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .cta-box-text h3 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .cta-box-text p {
+    font-size: 1rem;
+    color: rgba(240,237,230,0.5);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .btn-primary {
+    padding: 1rem 2.5rem;
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: background 0.3s;
+    white-space: nowrap;
+  }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-secondary {
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(240,237,230,0.25);
+    display: inline-block;
+    transition: border-color 0.3s, color 0.3s;
+    white-space: nowrap;
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--gray-line);
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1rem;
+    color: rgba(240,237,230,0.3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .footer-copy {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    color: rgba(240,237,230,0.2);
+    text-transform: uppercase;
+  }
+
+  /* REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .page-hero { padding: 0 1.5rem 4rem; min-height: 50vh; }
+    .page-hero-sigil { display: none; }
+    .content-wrap { padding: 4rem 1.5rem; }
+    .summary-bar { padding: 1.5rem; gap: 1.2rem; }
+    .summary-divider { display: none; }
+    .timeline::before { left: 35px; }
+    .step { gap: 1.5rem; }
+    .step-title { font-size: 1.2rem; }
+    .step-desc { font-size: 1rem; }
+    .cta-box { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+
+  /* ============================================================
+     MOBILE BOTTOM NAV
+     แสดงเฉพาะหน้าจอ ≤ 900px (มือถือ/แท็บเล็ต)
+  ============================================================ */
+
+  /* ซ่อน nav บนหัวเมื่ออยู่บนมือถือ */
+  @media (max-width: 900px) {
+    nav { display: none !important; }
+  }
+
+  /* แถบ nav ล่าง — ซ่อนบนคอมโดยดีฟอลต์ */
+  .mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 64px;
+    background: rgba(8,8,8,0.96);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(200,192,168,0.12);
+    z-index: 2000;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* แสดงเฉพาะมือถือ */
+  @media (max-width: 900px) {
+    .mobile-bottom-nav { display: flex !important; }
+    body { padding-bottom: 72px; }
+  }
+
+  /* แต่ละปุ่ม */
+  .mob-nav-item {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 4px;
+    color: rgba(200,192,168,0.38);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.48rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.25s;
+    padding-top: 4px;
+    position: relative;
+  }
+
+  /* ปุ่ม active — สีทอง */
+  .mob-nav-item.active { color: var(--accent); }
+
+  /* icon */
+  .mob-nav-icon {
+    width: 20px; height: 20px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .mob-nav-icon svg {
+    width: 100%; height: 100%;
+    stroke: currentColor; fill: none;
+    stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">Black <span>Gothic</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="style.html" >Style</a></li>
+    <!-- <li><a href="index.html#contact">Order</a></li> -->
+    <li><a href="warranty.html">Warranty</a></li>
+    <li><a href="care.html">Care</a></li>
+    <li><a href="order.html">Order</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <svg class="page-hero-sigil" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="190" fill="none" stroke="white" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="140" fill="none" stroke="white" stroke-width="0.5"/>
+    <polygon points="200,10 385,305 15,305" fill="none" stroke="white" stroke-width="0.5"/>
+    <polygon points="200,390 15,95 385,95" fill="none" stroke="white" stroke-width="0.5"/>
+    <line x1="200" y1="10" x2="200" y2="390" stroke="white" stroke-width="0.3"/>
+    <line x1="10" y1="200" x2="390" y2="200" stroke="white" stroke-width="0.3"/>
+    <circle cx="200" cy="200" r="10" fill="white" opacity="0.3"/>
+  </svg>
+  <div class="page-hero-content">
+    <p class="page-eyebrow">// How To Order · Black Gothic</p>
+    <h1 class="page-title">ขั้นตอน<br>การสั่งซื้อ</h1>
+    <p class="page-subtitle">
+      ทั้ง 8 ขั้นตอนนี้ออกแบบมาเพื่อให้ลูกค้ามั่นใจในทุกจุด
+      ตั้งแต่ติดต่อครั้งแรกจนถึงรับเสื้อที่เป็นตัวคุณ
+    </p>
+  </div>
+</div>
+
+<!-- SUMMARY BAR -->
+<div class="summary-bar">
+  <div class="summary-item">
+    <span class="summary-label">ช่องทาง</span>
+    <span class="summary-value">@black1gothic</span>
+  </div>
+  <div class="summary-divider"></div>
+  <div class="summary-item">
+    <span class="summary-label">มัดจำ</span>
+    <span class="summary-value">50%</span>
+  </div>
+  <div class="summary-divider"></div>
+  <div class="summary-item">
+    <span class="summary-label">ระยะเวลา</span>
+    <span class="summary-value">5-10 วันทำการ</span>
+  </div>
+  <div class="summary-divider"></div>
+  <div class="summary-item">
+    <span class="summary-label">แก้ดีไซน์</span>
+    <span class="summary-value">ไม่จำกัดครั้ง</span>
+  </div>
+  <div class="summary-divider"></div>
+  <div class="summary-item">
+    <span class="summary-label">ออนไลน์</span>
+    <span class="summary-value">100%</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+  <div class="timeline">
+
+    <!-- STEP 01 -->
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div class="step-body">
+        <div class="step-tag">// Contact Us</div>
+        <div class="step-title">ติดต่อและแจ้งความต้องการ</div>
+        <div class="step-desc">
+          ทัก DM มาที่ Instagram หรือ TikTok
+          <strong style="color:var(--accent);">@black1gothic</strong>
+          พร้อมแจ้งข้อมูลเบื้องต้นดังนี้
+        </div>
+        <ul class="step-list">
+          <li>ไอเดียหรือธีมที่ต้องการ เช่น Cybersigilism, Gothic, หรือผสมผสาน</li>
+          <li>ตำแหน่งที่ต้องการเพ้นบนเสื้อ เช่น หน้า / หลัง / แขน</li>
+          <li>ขนาดของลาย (คร่าวๆ)</li>
+          <li>รูปเสื้อที่จะนำมาเพ้น ถ่ายภาพส่งมาได้เลย</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 02 -->
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <div class="step-body">
+        <div class="step-tag">// Receive Quote</div>
+        <div class="step-title">รับ Quote และยืนยันงาน</div>
+        <div class="step-desc">
+          ทางร้านจะประเมินราคาและระยะเวลาให้ภายใน
+          <strong style="color:var(--accent);">24-48 ชั่วโมง</strong>
+          โดยพิจารณาจากความซับซ้อนของลายและขนาดงาน
+          เมื่อลูกค้ายืนยันรับราคาแล้ว จึงดำเนินการขั้นตอนถัดไป
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 03 -->
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <div class="step-body">
+        <div class="step-tag">// Deposit Payment</div>
+        <div class="step-title">ชำระเงินมัดจำ</div>
+        <div class="step-desc">
+          เพื่อยืนยันการจอง ลูกค้าชำระ
+          <strong style="color:var(--accent);">มัดจำ 50% ของราคาทั้งหมด</strong>
+          ก่อนเริ่มงาน
+        </div>
+        <ul class="step-list">
+          <li>โอนผ่านธนาคาร (แจ้งบัญชีทาง DM)</li>
+          <li>PromptPay</li>
+        </ul>
+        <div class="step-note">
+          📌 งานจะเริ่มดำเนินการหลังได้รับหลักฐานการโอนเท่านั้น
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 04 -->
+    <div class="step reveal">
+      <div class="step-num">04</div>
+      <div class="step-body">
+        <div class="step-tag">// Send Your Shirt</div>
+        <div class="step-title">ส่งเสื้อมาที่ร้าน</div>
+        <div class="step-desc">
+          ลูกค้าจัดส่งเสื้อมาที่ร้านด้วยตัวเอง
+          โดย <strong style="color:var(--accent);">ค่าขนส่งขาไปเป็นความรับผิดชอบของลูกค้า</strong>
+        </div>
+        <div class="step-note">
+          📌 แนะนำให้แพ็คเสื้อให้มิดชิด และถ่ายภาพก่อนส่งเพื่อเป็นหลักฐาน
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 05 -->
+    <div class="step reveal">
+      <div class="step-num">05</div>
+      <div class="step-body">
+        <div class="step-tag">// Approve Design</div>
+        <div class="step-title">ออกแบบและยืนยันลาย</div>
+        <div class="step-desc">
+          ทางร้านออกแบบลายเป็น <strong style="color:var(--accent);">ไฟล์ดิจิทัล</strong>
+          และส่งให้ลูกค้าดูก่อนลงมือเพ้นจริง
+        </div>
+        <ul class="step-list">
+          <li>✅ ยืนยันลาย → ทางร้านเริ่มเพ้นทันที</li>
+          <li>🔄 ปรับแก้ได้ไม่จำกัดครั้ง ภายใต้ concept เดิม ไม่มีค่าใช้จ่ายเพิ่ม</li>
+        </ul>
+        <div class="step-note">
+          📌 หากต้องการเปลี่ยน concept ใหม่ทั้งหมด อาจมีค่าออกแบบเพิ่มเติมตามความซับซ้อน
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 06 -->
+    <div class="step reveal">
+      <div class="step-num">06</div>
+      <div class="step-body">
+        <div class="step-tag">// Paint & Update</div>
+        <div class="step-title">เพ้นและอัปเดตความคืบหน้า</div>
+        <div class="step-desc">
+          ทางร้านดำเนินการเพ้นตามลายที่ยืนยันแล้ว
+          และจะ <strong style="color:var(--accent);">อัปเดตภาพระหว่างทำ</strong>
+          ให้ลูกค้าติดตามความคืบหน้าได้ตลอด
+        </div>
+        <div class="step-note">
+          ⏱ ระยะเวลาโดยประมาณ 5-10 วันทำการ ขึ้นอยู่กับความซับซ้อนของงาน
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 07 -->
+    <div class="step reveal">
+      <div class="step-num">07</div>
+      <div class="step-body">
+        <div class="step-tag">// Final Payment & Ship</div>
+        <div class="step-title">ชำระเงินส่วนที่เหลือและจัดส่ง</div>
+        <div class="step-desc">
+          เมื่องานเสร็จสมบูรณ์ ทางร้านจะส่งภาพผลงานให้ลูกค้าดูก่อน จากนั้น
+        </div>
+        <ul class="step-list">
+          <li>ลูกค้าชำระ <strong style="color:var(--accent);">ยอดที่เหลือ 50%</strong></li>
+          <li>ทางร้านจัดส่งเสื้อกลับ โดย <strong style="color:var(--accent);">ค่าขนส่งขากลับเป็นความรับผิดชอบของลูกค้า</strong></li>
+          <li>แจ้งเลขพัสดุให้ทาง DM</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP 08 -->
+    <div class="step reveal">
+      <div class="step-num">08</div>
+      <div class="step-body">
+        <div class="step-tag">// Receive & Review</div>
+        <div class="step-title">รับเสื้อและ Review</div>
+        <div class="step-desc">
+          ลูกค้ารับเสื้อและตรวจสอบความเรียบร้อย
+          หากมีปัญหาจากการขนส่งหรือความผิดพลาดจากทางร้าน
+          สามารถแจ้งได้ภายใน <strong style="color:var(--accent);">48 ชั่วโมง</strong> หลังได้รับสินค้า
+        </div>
+        <!-- <div class="step-note">
+          🖤 ยินดีรับ Review และ Tag ใน IG เพื่อเป็นกำลังใจให้ทีมงานด้วยนะครับ
+        </div> -->
+      </div>
+    </div>
+
+  </div><!-- end timeline -->
+
+  <!-- LINK TO WARRANTY & CARE -->
+  <div class="section-divider reveal">
+    <div class="section-divider-line"></div>
+    <span class="section-divider-text">// More Information</span>
+    <div class="section-divider-line"></div>
+  </div>
+  <div class="reveal" style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; padding: 2rem 0;">
+
+    <!-- Warranty Card -->
+    <div style="flex:1; min-width:240px; max-width:380px; border:1px solid var(--gray-line); background:var(--gray-dark); padding:2.5rem; text-align:center;">
+      <div style="font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.3em; color:var(--accent); text-transform:uppercase; margin-bottom:1rem;">// Warranty & Guarantee</div>
+      <p style="font-size:1rem; color:rgba(240,237,230,0.55); font-weight:300; line-height:1.8; margin-bottom:2rem;">
+        นโยบายการรับประกัน<br>ความรับผิดชอบ และเงื่อนไขของร้าน
+      </p>
+      <a href="warranty.html" class="btn-primary">ดูนโยบายการรับประกัน →</a>
+    </div>
+
+    <!-- Care Card -->
+    <div style="flex:1; min-width:240px; max-width:380px; border:1px solid var(--gray-line); background:var(--gray-dark); padding:2.5rem; text-align:center;">
+      <div style="font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.3em; color:var(--accent); text-transform:uppercase; margin-bottom:1rem;">// Shirt Care Guide</div>
+      <p style="font-size:1rem; color:rgba(240,237,230,0.55); font-weight:300; line-height:1.8; margin-bottom:2rem;">
+        วิธีดูแลเสื้อเพ้นลาย<br>ให้สีคงทนและงานสวยนานที่สุด
+      </p>
+      <a href="care.html" class="btn-secondary">วิธีดูแลเสื้อเพ้นลาย →</a>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box reveal">
+    <div class="cta-box-text">
+      <h3>พร้อมสั่งเพ้นแล้วใช่ไหม?</h3>
+      <p>ทัก DM มาหาเราได้เลย ไม่มีค่าใช้จ่ายในการสอบถาม<br>ทีมงานพร้อมตอบทุกวัน</p>
+    </div>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <a href="https://www.instagram.com/black1gothic" target="_blank" class="btn-primary">📷 Instagram</a>
+      <a href="index.html" class="btn-secondary">← กลับหน้าหลัก</a>
+    </div>
+  </div>
+</div>
+<!-- end content-wrap -->
+
+<footer>
+  <span class="footer-logo">BLACK<span style="opacity:0.5;">1</span>GOTHIC</span>
+  <span class="footer-copy">© 2026 Black Gothic — All Rights Reserved</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<!-- ============================================================
+     MOBILE BOTTOM NAV HTML
+     วางก่อน </body> — แสดงเฉพาะมือถือผ่าน CSS
+============================================================ -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav">
+
+  <!-- Home -->
+  <a href="index.html" class="mob-nav-item" id="mbn-home">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    </div>
+    <span>Home</span>
+  </a>
+
+  <!-- Style -->
+  <a href="style.html" class="mob-nav-item" id="mbn-style">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    </div>
+    <span>Style</span>
+  </a>
+
+  <!-- Gallery -->
+  <a href="gallery.html" class="mob-nav-item" id="mbn-gallery">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    </div>
+    <span>Gallery</span>
+  </a>
+
+  <!-- Order (active บนหน้านี้) -->
+  <a href="order.html" class="mob-nav-item active" id="mbn-order">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    </div>
+    <span>Order</span>
+  </a>
+
+  <!-- Contact -->
+  <a href="index.html#contact" class="mob-nav-item" id="mbn-contact">
+    <div class="mob-nav-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </div>
+    <span>Contact</span>
+  </a>
+
+</nav>
+</body>
+</html>
